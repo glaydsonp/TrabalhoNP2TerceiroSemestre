@@ -1,0 +1,57 @@
+package view;
+
+import controller.CursoControl;
+import model.Curso;
+import model.Faculdade;
+
+public class CursoView {
+    Faculdade faculdade = new Faculdade();
+    CursoControl view = new CursoControl();
+
+    public void inicio() {
+        boolean continua = true;
+        while (continua) {
+
+            int escolha = menu();
+            switch (escolha) {
+                case 1:
+                    inserirCurso();
+                    break;
+                case 2:
+                    continua = false;
+                    break;
+                default:
+                    System.out.println("opcao nao listada");
+
+            }
+
+        }
+        System.exit(0);
+    }
+
+    public int menu() {
+        return view.escolherOpcao();
+    }
+
+    public void inserirCurso() {
+
+        System.out.println("mostrando cursos");
+        view.mostrarCursos(faculdade.gradeDeCursos);
+
+        boolean cursoInserido = false;
+
+        while (cursoInserido == false) {
+
+            Curso curso = view.pedirCurso();
+
+            cursoInserido = faculdade.gradeDeCursos.add(curso);
+            if (cursoInserido == false) {
+                System.out.println("Curso nao foi inserido");
+            }
+        }
+
+        System.out.println("mostrando cursos");
+        view.mostrarCursos(faculdade.gradeDeCursos);
+
+    }
+}
