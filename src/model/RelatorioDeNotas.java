@@ -21,6 +21,6 @@ public class RelatorioDeNotas {
         for (Rendimento r : relatorio) {
             res += r + "\n";
         }
-        return "RelatorioDeNotas: " + res;
+        return "Relatorio de Notas: " + res;
     }
 }

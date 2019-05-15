@@ -1,24 +1,58 @@
+
 package controller;
 
-import java.util.Scanner;
-import model.Rendimento;
+import model.Curso;
+import model.Faculdade;
+import view.CursoView;
 
 public class RendimentoControl {
-    
-    public int escolherOpcao() {
-        System.out.println("Digite 1 para inserir um novo rendimento.\nDigite 2 para fechar o programa: ");
-        Scanner in = new Scanner(System.in);
-        return in.nextInt();
+    Faculdade faculdade = new Faculdade();
+    CursoView view = new CursoView();
+
+    public void inicio() {
+        boolean continua = true;
+        do {
+            int escolha = menu();
+            switch (escolha) {
+                case 1:
+                    inserirCurso();
+                    System.out.println("aqui");
+                    break;
+                case 2:
+                    continua = false;
+                    break;
+                default:
+                    System.out.println("opcao nao listada");
+
+            }}while (continua == true);
+
+        
+        System.exit(0);
     }
-    
-    public Rendimento pedirRendimento() {
-        //TODO
-        Scanner in = new Scanner(System.in);
-        System.out.println("Insira o ID do aluno cujo deseja adicionar um rendimento: ");
-        String novoId = in.nextLine();
-        
-//        if(!alunos.containsKey(aluno.getId())){}
-        
-        return null;
+
+    public int menu() {
+        return view.escolherOpcao();
+    }
+
+    public void inserirCurso() {
+
+        System.out.println("mostrando cursos");
+        view.mostrarCursos(faculdade.gradeDeCursos);
+
+        boolean cursoInserido = false;
+
+        while (cursoInserido == false) {
+
+            Curso curso = view.pedirCurso();
+
+            cursoInserido = faculdade.gradeDeCursos.add(curso);
+            if (cursoInserido == false) {
+                System.out.println("Curso nao foi inserido");
+            }
+        }
+
+        System.out.println("mostrando cursos");
+        view.mostrarCursos(faculdade.gradeDeCursos);
+
     }
 }

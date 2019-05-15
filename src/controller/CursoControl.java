@@ -1,37 +1,63 @@
 package controller;
 
-import entities.TipoDoCurso;
-import java.util.Scanner;
 import model.Curso;
-import model.GradeDeCursos;
+import model.Faculdade;
+import view.CursoView;
 
 public class CursoControl {
     
+    Faculdade faculdade = new Faculdade();
+    CursoView view = new CursoView();
 
-    public int escolherOpcao() {
-        System.out.println("Digite 1 para inserir um novo curso.\nDigite 2 para fechar o programa: ");
-        Scanner in = new Scanner(System.in);
-        return in.nextInt();
+    public void inicio() {
+        boolean continua = true;
+        do {
+            int escolha = menu();
+            switch (escolha) {
+                case 1:
+                    inserirCurso();
+                    System.out.println("aqui");
+                    break;
+                case 2:
+                    continua = false;
+                    break;
+                default:
+                    System.out.println("opcao nao listada");
+
+            }}while (continua == true);
+
+        
+        System.exit(0);
     }
 
-    public void mostrarCursos(GradeDeCursos grade) {
-        System.out.println(grade);
+    public int menu() {
+        return view.escolherOpcao();
     }
 
-    public Curso pedirCurso() {
+    public void inserirCurso() {
 
-        System.out.println("Entre com os dados do curso");
+        System.out.println("mostrando cursos");
+        view.mostrarCursos(faculdade.gradeDeCursos);
 
-        Scanner in = new Scanner(System.in);
-        System.out.println("Nome: ");
-        String novoNome = in.nextLine();
-        System.out.println("Ano: ");
-        Integer novoAno = in.nextInt();
-        System.out.println("Tipo: ");
-        String novoTipo = in.nextLine();
+        boolean cursoInserido = false;
 
-        return new Curso(novoNome, novoAno, TipoDoCurso.valueOf(novoTipo));
+        while (cursoInserido == false) {
+
+            Curso curso = view.pedirCurso();
+
+            cursoInserido = faculdade.gradeDeCursos.add(curso);
+            if (cursoInserido == false) {
+                System.out.println("Curso nao foi inserido");
+            }
+        }
+
+        System.out.println("mostrando cursos");
+        view.mostrarCursos(faculdade.gradeDeCursos);
+
     }
+    
+
+    
 
     
 }

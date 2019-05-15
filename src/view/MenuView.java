@@ -76,11 +76,11 @@ public class MenuView {
     
     public void incluirCurso() {
         CursoControl curso = new CursoControl();
-        curso.escolherOpcao();
+        curso.inicio();
     }
 
     public void incluirRendimento() {
         RendimentoControl rendimento = new RendimentoControl();
-        rendimento.escolherOpcao();
+        rendimento.inicio();
     }
 }

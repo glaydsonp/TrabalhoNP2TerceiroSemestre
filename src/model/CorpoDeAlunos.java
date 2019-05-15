@@ -27,6 +27,6 @@ public class CorpoDeAlunos {
 
     @Override
     public String toString() {
-        return "CorpoDeAlunos" + alunos;
+        return "Corpo de Alunos" + alunos;
     }
 }

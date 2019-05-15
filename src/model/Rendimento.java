@@ -1,6 +1,6 @@
 package model;
 
-import entities.Prova;
+import model.entities.Prova;
 
 public class Rendimento {
 

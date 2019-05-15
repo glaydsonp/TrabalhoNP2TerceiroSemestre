@@ -1,6 +1,6 @@
 package model;
 
-import entities.TipoDoCurso;
+import model.entities.TipoDoCurso;
 
 public class Curso implements Comparable<Curso> {
 
