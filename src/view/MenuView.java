@@ -53,6 +53,7 @@ public class MenuView {
         System.exit(0);
     }
     
+    
     public void listarCursos() {
         CursoControl cursos = new CursoControl();
         cursos.listarCursos();
@@ -82,7 +83,6 @@ public class MenuView {
     }
 
     public void incluirRendimento() {
-        RendimentoControl rendimento = new RendimentoControl();
-        rendimento.inicio();
+        //TODO
     }
 }
