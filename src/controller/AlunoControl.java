@@ -1,6 +1,7 @@
 package controller;
 
 import model.Aluno;
+import model.CorpoDeAlunos;
 import model.Faculdade;
 import view.AlunoView;
 
@@ -56,5 +57,11 @@ public class AlunoControl {
         System.out.println("mostrando alunos");
         view.mostrarAlunos(faculdade.corpoDeAlunos);
 
+    }
+    
+    public void listarAlunos(){
+        CorpoDeAlunos grade = new CorpoDeAlunos();
+        grade.listarAlunos();
+        
     }
 }

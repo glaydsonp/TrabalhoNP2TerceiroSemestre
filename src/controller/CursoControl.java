@@ -2,6 +2,7 @@ package controller;
 
 import model.Curso;
 import model.Faculdade;
+import model.GradeDeCursos;
 import view.CursoView;
 
 public class CursoControl {
@@ -56,7 +57,11 @@ public class CursoControl {
 
     }
     
-
+    public void listarCursos(){
+        GradeDeCursos grade = new GradeDeCursos();
+        grade.listarCursos();
+        
+    }
     
 
     

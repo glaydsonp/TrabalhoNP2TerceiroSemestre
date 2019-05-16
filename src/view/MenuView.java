@@ -54,11 +54,13 @@ public class MenuView {
     }
     
     public void listarCursos() {
-        //TODO
+        CursoControl cursos = new CursoControl();
+        cursos.listarCursos();
     }
     
     public void listarAlunos() {
-        //TODO
+        AlunoControl aluno = new AlunoControl();
+        aluno.listarAlunos();
     }
     
     public void listarHistorico() {
