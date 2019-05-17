@@ -18,8 +18,6 @@ listarHistorico()
 listarRelatorio()
 incluirRendimento()
 conferir compareTo() do Curso
-ENUM aprovado reprovado
-classe media 
 
 	no control
 CorpoDeAlunos
