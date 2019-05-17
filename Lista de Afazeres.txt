@@ -1,0 +1,28 @@
+main > 
+	lê todos os CSV
+	executa menu
+	sobrescreve os CSV
+> fim
+
+
+//TODO
+	no menu
+listarHistorico()
+listarRelatorio()
+incluirRendimento()
+
+	no model
+listarCurso()
+listarAluno()
+listarHistorico()
+listarRelatorio()
+incluirRendimento()
+conferir compareTo() do Curso
+ENUM aprovado reprovado
+classe media 
+
+	no control
+CorpoDeAlunos
+GradeDeCursos
+
+controle de erros try-catch
