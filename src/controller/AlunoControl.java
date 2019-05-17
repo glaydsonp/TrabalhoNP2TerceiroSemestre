@@ -4,6 +4,7 @@ import model.Aluno;
 import model.CorpoDeAlunos;
 import model.Faculdade;
 import view.AlunoView;
+import view.MenuView;
 
 public class AlunoControl {
 
@@ -20,7 +21,8 @@ public class AlunoControl {
                     inserirAluno();
                     break;
                 case 2:
-                    continua = false;
+                    MenuView start = new MenuView();
+                    start.inicio();
                     break;
                 default:
                     System.out.println("opcao nao listada");
@@ -36,11 +38,9 @@ public class AlunoControl {
     }
 
     public void inserirAluno() {
-        
-        
 
-        System.out.println("mostrando alunos");
-        view.mostrarAlunos(faculdade.corpoDeAlunos);
+//        System.out.println("mostrando alunos");
+//        view.mostrarAlunos(faculdade.corpoDeAlunos);
 
         boolean alunoInserido = false;
 
@@ -54,14 +54,12 @@ public class AlunoControl {
             }
         }
 
-        System.out.println("mostrando alunos");
-        view.mostrarAlunos(faculdade.corpoDeAlunos);
+//        System.out.println("mostrando alunos");
+//        view.mostrarAlunos(faculdade.corpoDeAlunos);
 
     }
     
     public void listarAlunos(){
-        CorpoDeAlunos grade = new CorpoDeAlunos();
-        grade.listarAlunos();
-        
+        //TODO
     }
 }

@@ -1,4 +1,3 @@
-
 package view;
 
 import controller.MenuControl;
@@ -52,31 +51,30 @@ public class MenuView {
         }
         System.exit(0);
     }
-    
-    
+
     public void listarCursos() {
         CursoControl cursos = new CursoControl();
         cursos.listarCursos();
     }
-    
+
     public void listarAlunos() {
-        AlunoControl aluno = new AlunoControl();
-        aluno.listarAlunos();
+        AlunoControl alunos = new AlunoControl();
+        alunos.listarAlunos();
     }
-    
+
     public void listarHistorico() {
         //TODO
     }
-    
-    public void listarRelatorio(){
+
+    public void listarRelatorio() {
         //TODO
     }
-    
+
     public void incluirAluno() {
         AlunoControl aluno = new AlunoControl();
         aluno.inicio();
     }
-    
+
     public void incluirCurso() {
         CursoControl curso = new CursoControl();
         curso.inicio();

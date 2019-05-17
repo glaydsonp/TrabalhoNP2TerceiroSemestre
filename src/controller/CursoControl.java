@@ -4,6 +4,7 @@ import model.Curso;
 import model.Faculdade;
 import model.GradeDeCursos;
 import view.CursoView;
+import view.MenuView;
 
 public class CursoControl {
     
@@ -20,7 +21,8 @@ public class CursoControl {
                     System.out.println("aqui");
                     break;
                 case 2:
-                    continua = false;
+                    MenuView start = new MenuView();
+                    start.inicio();
                     break;
                 default:
                     System.out.println("opcao nao listada");
@@ -37,8 +39,8 @@ public class CursoControl {
 
     public void inserirCurso() {
 
-        System.out.println("mostrando cursos");
-        view.mostrarCursos(faculdade.gradeDeCursos);
+//        System.out.println("mostrando cursos");
+//        view.mostrarCursos(faculdade.gradeDeCursos);
 
         boolean cursoInserido = false;
 
@@ -52,17 +54,11 @@ public class CursoControl {
             }
         }
 
-        System.out.println("mostrando cursos");
-        view.mostrarCursos(faculdade.gradeDeCursos);
+//        System.out.println("mostrando cursos");
+//        view.mostrarCursos(faculdade.gradeDeCursos);
 
-    }
-    
+    }    
     public void listarCursos(){
-        GradeDeCursos grade = new GradeDeCursos();
-        grade.listarCursos();
-        
+        //TODO
     }
-    
-
-    
 }

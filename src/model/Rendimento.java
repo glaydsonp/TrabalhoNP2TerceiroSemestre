@@ -1,5 +1,6 @@
 package model;
 
+import java.util.Map;
 import model.entities.Prova;
 
 public class Rendimento {
@@ -24,8 +25,8 @@ public class Rendimento {
         return notas;
     }
 
-    public void setNota(Prova prova, double nota) {
-        this.notas.setNota(prova, nota);
+    public void setNotas(Prova prova, Double nota) {
+        this.notas.add(prova, nota);
     }
 
     @Override

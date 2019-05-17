@@ -3,8 +3,8 @@ package model;
 public class Faculdade {
 
     GradeDeCursos grade;
-    public CorpoDeAlunos corpoDeAlunos = new CorpoDeAlunos();
-    public GradeDeCursos gradeDeCursos = new GradeDeCursos();
+    public static CorpoDeAlunos corpoDeAlunos = new CorpoDeAlunos();
+    public static GradeDeCursos gradeDeCursos = new GradeDeCursos();
 
     public Faculdade() {
         grade = new GradeDeCursos();

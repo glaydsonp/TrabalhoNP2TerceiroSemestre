@@ -8,7 +8,7 @@ import model.CorpoDeAlunos;
 public class AlunoView {
 
     public int escolherOpcao() {
-        System.out.println("Digite 1 para inserir um novo aluno.\nDigite 2 para fechar o programa: ");
+        System.out.println("Digite 1 para inserir um novo aluno.\nDigite 2 para voltar ao menu principal: ");
         Scanner in = new Scanner(System.in);
         return in.nextInt();
     }
