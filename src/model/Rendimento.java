@@ -1,13 +1,12 @@
 package model;
 
-import java.util.Map;
 import model.entities.Prova;
 
 public class Rendimento {
 
     Curso curso;
-
     Notas notas;
+    Media media = new Media();
 
     public Rendimento(Curso curso) {
         this.curso = curso;
@@ -27,6 +26,15 @@ public class Rendimento {
 
     public void setNotas(Prova prova, Double nota) {
         this.notas.add(prova, nota);
+    }
+    
+    public String getStatusAluno(){
+        if(media.getMedia() >= 5.0){
+            return "APROVADO";
+        } else {
+            return "REPROVADO";
+        }
+//        return null;
     }
 
     @Override

@@ -21,22 +21,12 @@ public class CorpoDeAlunos {
         }
     }
 
-    public String listarAlunos() {
-        //TODO
-        
-//        String res = "";
-//        for (String r : alunos.keySet()) {
-//            Aluno valor = alunos.get(r);
-//        }
-        return null;
-    }
-    
     public Aluno getAluno(String id) {
         return alunos.get(id);
     }
-    
+
     @Override
-        public String toString() {
+    public String toString() {
         return "Corpo de Alunos" + alunos;
     }
 }

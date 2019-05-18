@@ -18,9 +18,7 @@ public class RelatorioDeNotas {
     @Override
     public String toString() {
         String res = "";
-        for (Rendimento r : relatorio) {
-            res += r + "\n";
-        }
-        return "Relatorio de Notas: " + res;
+        res = relatorio.stream().map((r) -> r + "\n").reduce(res, String::concat);
+        return "\nRelatorio de Notas: " + res;
     }
 }

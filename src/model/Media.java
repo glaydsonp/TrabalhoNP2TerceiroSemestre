@@ -6,10 +6,19 @@ public class Media {
 
     private Nota media;
     Notas notas = new Notas();
+    Double mediaFinal = 0.0;
+    
+    public Media() {
+    }
 
+    public Media(Nota media) {
+        this.media = media;
+    }
+    
+    public double getMedia(){
+        return mediaFinal;
+    }
     public double getMedia(Nota nota, Curso curso) {
-        Double mediaFinal = 0.0;
-
         switch (String.valueOf(curso.getTipoDoCurso())) {
             case "GRADUACAO":
                 mediaPos(nota);
@@ -21,7 +30,6 @@ public class Media {
                 System.out.println("Erro: nivel de curso invalido.");
                 break;
         }
-
         return mediaFinal;
     }
 

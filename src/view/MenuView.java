@@ -8,6 +8,9 @@ import controller.RendimentoControl;
 public class MenuView {
 
     MenuControl view = new MenuControl();
+    CursoControl curso = new CursoControl();
+    AlunoControl alunos = new AlunoControl();
+    RendimentoControl rendimento = new RendimentoControl();
 
     public int menu() {
         return view.menuPrincipal();
@@ -53,12 +56,10 @@ public class MenuView {
     }
 
     public void listarCursos() {
-        CursoControl cursos = new CursoControl();
-        cursos.listarCursos();
+        curso.listarCursos();
     }
 
-    public void listarAlunos() {
-        AlunoControl alunos = new AlunoControl();
+    public void listarAlunos() { 
         alunos.listarAlunos();
     }
 
@@ -71,16 +72,14 @@ public class MenuView {
     }
 
     public void incluirAluno() {
-        AlunoControl aluno = new AlunoControl();
-        aluno.inicio();
+        alunos.inicio();
     }
 
     public void incluirCurso() {
-        CursoControl curso = new CursoControl();
         curso.inicio();
     }
 
     public void incluirRendimento() {
-        //TODO
+        rendimento.inicio();
     }
 }

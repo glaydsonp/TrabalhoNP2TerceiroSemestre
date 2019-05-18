@@ -6,5 +6,4 @@ public enum Prova {
     NP2, 
     SUB, 
     EXAME,
-    MEDIA_FINAL
 }

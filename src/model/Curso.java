@@ -7,6 +7,7 @@ public class Curso implements Comparable<Curso> {
     private String nomeDoCurso;
     private Integer anoDoCurso;
     private TipoDoCurso tipoDoCurso;
+    
 
     public Curso() {
     }
@@ -15,6 +16,7 @@ public class Curso implements Comparable<Curso> {
         this.nomeDoCurso = nomeDoCurso;
         this.anoDoCurso = anoDoCurso;
         this.tipoDoCurso = tipoDoCurso;
+        
     }
 
     public String getNomeDoCurso() {

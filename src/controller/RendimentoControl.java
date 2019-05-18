@@ -4,6 +4,7 @@ package controller;
 import model.Curso;
 import model.Faculdade;
 import view.CursoView;
+import view.MenuView;
 
 public class RendimentoControl {
     Faculdade faculdade = new Faculdade();
@@ -15,11 +16,11 @@ public class RendimentoControl {
             int escolha = menu();
             switch (escolha) {
                 case 1:
-                    inserirCurso();
-                    System.out.println("aqui");
+                    inserirRendimento();
                     break;
                 case 2:
-                    continua = false;
+                    MenuView start = new MenuView();
+                    start.inicio();
                     break;
                 default:
                     System.out.println("opcao nao listada");
@@ -34,25 +35,25 @@ public class RendimentoControl {
         return view.escolherOpcao();
     }
 
-    public void inserirCurso() {
-
-        System.out.println("mostrando cursos");
-        view.mostrarCursos(faculdade.gradeDeCursos);
-
-        boolean cursoInserido = false;
-
-        while (cursoInserido == false) {
-
-            Curso curso = view.pedirCurso();
-
-            cursoInserido = faculdade.gradeDeCursos.add(curso);
-            if (cursoInserido == false) {
-                System.out.println("Curso nao foi inserido");
-            }
-        }
-
-        System.out.println("mostrando cursos");
-        view.mostrarCursos(faculdade.gradeDeCursos);
+    public void inserirRendimento() {
+//
+//        System.out.println("mostrando cursos");
+//        view.mostrarCursos(faculdade.gradeDeCursos);
+//
+//        boolean cursoInserido = false;
+//
+//        while (cursoInserido == false) {
+//
+//            Curso curso = view.pedirCurso();
+//
+//            cursoInserido = faculdade.gradeDeCursos.add(curso);
+//            if (cursoInserido == false) {
+//                System.out.println("Curso nao foi inserido");
+//            }
+//        }
+//
+//        System.out.println("mostrando cursos");
+//        view.mostrarCursos(faculdade.gradeDeCursos);
 
     }
 }

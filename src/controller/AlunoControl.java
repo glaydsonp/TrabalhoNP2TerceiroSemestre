@@ -1,7 +1,6 @@
 package controller;
 
 import model.Aluno;
-import model.CorpoDeAlunos;
 import model.Faculdade;
 import view.AlunoView;
 import view.MenuView;
@@ -14,7 +13,6 @@ public class AlunoControl {
     public void inicio() {
         boolean continua = true;
         while (continua) {
-
             int escolha = menu();
             switch (escolha) {
                 case 1:
@@ -26,9 +24,7 @@ public class AlunoControl {
                     break;
                 default:
                     System.out.println("opcao nao listada");
-
             }
-
         }
         System.exit(0);
     }
@@ -38,28 +34,21 @@ public class AlunoControl {
     }
 
     public void inserirAluno() {
-
-//        System.out.println("mostrando alunos");
-//        view.mostrarAlunos(faculdade.corpoDeAlunos);
-
         boolean alunoInserido = false;
 
         while (alunoInserido == false) {
 
             Aluno aluno = view.pedirAluno();
 
-            alunoInserido = faculdade.corpoDeAlunos.add(aluno);
+            alunoInserido = Faculdade.corpoDeAlunos.add(aluno);
             if (alunoInserido == false) {
                 System.out.println("Aluno nao foi inserido");
             }
         }
-
-//        System.out.println("mostrando alunos");
-//        view.mostrarAlunos(faculdade.corpoDeAlunos);
-
     }
-    
-    public void listarAlunos(){
-        //TODO
+
+    public void listarAlunos() {
+        System.out.println("mostrando alunos");
+        view.mostrarAlunos(Faculdade.corpoDeAlunos);
     }
 }

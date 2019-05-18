@@ -35,10 +35,6 @@ public class GradeDeCursos {
         RelatorioDeNotas relatorio = relatorios.get(rendimento.getCurso());
         relatorio.add(rendimento);
     }
-    
-    public void listarCursos() {
-        //TODO
-    }
 
     @Override
     public String toString() {
