@@ -24,7 +24,7 @@ public class Rendimento {
         return notas;
     }
 
-    public void setNotas(Prova prova, Double nota) {
+    public void setNotas(Prova prova, Nota nota) {
         this.notas.add(prova, nota);
     }
     

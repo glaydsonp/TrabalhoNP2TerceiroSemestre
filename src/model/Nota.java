@@ -25,6 +25,16 @@ public class Nota {
         }
     }
 
+    public double getNota() {
+        return nota;
+    }
+
+    public void setNota(double nota) {
+        this.nota = nota;
+    }
+    
+    
+
     @Override
     public String toString() {
         return "Nota [valor=" + df.format(nota) + "]";

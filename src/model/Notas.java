@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class Notas {
 
-    Map<Prova, Double> notas;
+    Map<Prova, Nota> notas;
 
     public Notas() {
     }
@@ -15,23 +15,23 @@ public class Notas {
         notas = new TreeMap<>();
 
         for (Prova prova : Prova.values()) {
-            notas.put(prova, 0.0);
+            notas.put(prova, new Nota());
         }
     }
 
     public Double getNota(Prova prova) {
-        return notas.get(prova);
+        return notas.get(prova).getNota();
     }
 
-    public Map<Prova, Double> getNotas() {
+    public Map<Prova, Nota> getNotas() {
         return notas;
     }
 
-    public void setNotas(Prova prova, Double nota) {
+    public void setNotas(Prova prova, Nota nota) {
         this.notas.put(prova, nota);
     }
     
-    public void add(Prova prova, Double nota) {
+    public void add(Prova prova, Nota nota) {
         this.notas.put(prova, nota);
     }
     

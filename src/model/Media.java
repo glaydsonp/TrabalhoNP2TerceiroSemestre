@@ -15,6 +15,11 @@ public class Media {
         this.media = media;
     }
     
+    public Double getNota(){
+        Nota nota = new Nota();
+        return nota.getNota();
+    }
+    
     public double getMedia(){
         return mediaFinal;
     }
