@@ -1,16 +1,20 @@
 
 package view;
 
-import model.Aluno;
-import model.CorpoDeAlunos;
-import model.Curso;
-import model.GradeDeCursos;
-import static model.entities.TipoDoCurso.*;
+//import model.Aluno;
+
+//import model.Nota;
+//import model.Notas;
+//import static model.entities.Prova.*;
+//import model.CorpoDeAlunos;
+//import model.Curso;
+//import model.GradeDeCursos;
+//import static model.entities.TipoDoCurso.*;
 
 public class Main {
     public static void main(String[] args){
-        MenuView start = new MenuView(); 
-        start.inicio();
+//        MenuView start = new MenuView(); 
+//        start.inicio();
         
 //        CorpoDeAlunos aluno = new CorpoDeAlunos();
 //        Aluno aluno01 = new Aluno("123", "glaydson");
@@ -33,5 +37,8 @@ public class Main {
 //        System.out.println("----");
 //        System.out.println(aluno);
 //        System.out.println(grade);
+        
+        
+        
     }
 }

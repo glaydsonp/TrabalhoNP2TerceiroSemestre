@@ -27,11 +27,11 @@ public class Notas {
         return notas;
     }
 
-//    public void setNotas(Map<Prova, Double> notas) {
-//        this.notas = notas;
-//    }
-
     public void setNotas(Prova prova, Double nota) {
+        this.notas.put(prova, nota);
+    }
+    
+    public void add(Prova prova, Double nota) {
         this.notas.put(prova, nota);
     }
     
@@ -42,11 +42,8 @@ public class Notas {
             res += prova + ": " + notas.get(prova) + "\n";
         }
 
-        return "Notas:" + res;
+        return "Notas: " + res;
     }
 
-    void add(Prova prova, Double nota) {
-        this.notas.put(prova, nota);
-    }
 
 }
