@@ -20,11 +20,11 @@ public class Aluno implements Comparable<Aluno> {
         this.id = id;
     }
 
-    public String getnomeDoAluno() {
+    public String getNomeDoAluno() {
         return nomeDoAluno;
     }
 
-    public void setnomeDoAluno(String nomeDoAluno) {
+    public void setNomeDoAluno(String nomeDoAluno) {
         this.nomeDoAluno = nomeDoAluno;
     }
 
@@ -53,6 +53,7 @@ public class Aluno implements Comparable<Aluno> {
     @Override
     public String toString() {
         return "Aluno" + 
+                "\nId: " + id +
                 "\nNome do Aluno: " + nomeDoAluno;
     }
 }

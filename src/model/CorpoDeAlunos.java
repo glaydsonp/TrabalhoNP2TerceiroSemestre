@@ -5,7 +5,7 @@ import java.util.TreeMap;
 
 public class CorpoDeAlunos {
 
-    Map<String, Aluno> alunos;
+    Map<String, String> alunos;
 
     public CorpoDeAlunos() {
         this.alunos = new TreeMap<>();
@@ -13,7 +13,7 @@ public class CorpoDeAlunos {
 
     public boolean add(Aluno aluno) {
         if (!alunos.containsKey(aluno.getId())) {
-            alunos.put(aluno.getId(), aluno);
+            alunos.put(aluno.getId(), aluno.getNomeDoAluno());
             return true;
         } else {
             System.out.println("Aluno já existente.");
@@ -21,12 +21,17 @@ public class CorpoDeAlunos {
         }
     }
 
-    public Aluno getAluno(String id) {
+    public String getAluno(String id) {
         return alunos.get(id);
     }
 
     @Override
     public String toString() {
-        return "Corpo de Alunos" + alunos;
+        String listaAlunos = "";
+        for (String id : alunos.keySet()) {
+            listaAlunos += "ID: " + id + "\n";
+            listaAlunos += "Nome: " + alunos.get(id) + "\n";
+        }
+        return "Corpo de Alunos\n" + listaAlunos;
     }
 }

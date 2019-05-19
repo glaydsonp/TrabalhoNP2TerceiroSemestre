@@ -38,6 +38,11 @@ public class GradeDeCursos {
 
     @Override
     public String toString() {
-        return "GradeDeCursos \n" + relatorios + "]";
+        String listaCursos = ""; 
+        for (Curso id : relatorios.keySet()){
+            listaCursos += "Curso: " + id + "\n"; 
+            listaCursos += "Relatório: " + relatorios.get(id) + "\n";
+        }
+        return "GradeDeCursos \n" + relatorios;
     }
 }
