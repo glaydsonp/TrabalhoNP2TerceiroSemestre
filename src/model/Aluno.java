@@ -6,6 +6,10 @@ public class Aluno implements Comparable<Aluno> {
 
     public Aluno() {
     }
+    
+    public Aluno(String id) {
+        this.id = id;
+    }
 
     public Aluno(String id, String nomeDoAluno) {
         this.id = id;

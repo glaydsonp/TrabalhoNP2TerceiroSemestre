@@ -17,7 +17,6 @@ public class CursoControl {
             switch (escolha) {
                 case 1:
                     inserirCurso();
-                    System.out.println("aqui");
                     break;
                 case 2:
                     MenuView start = new MenuView();

@@ -34,7 +34,7 @@ public class Historico {
     }
 
     public Map<Aluno, GradeDeCursos> getHistorico(Aluno aluno) {
-        if (historico.containsKey(aluno)) {
+        if (historico.containsKey(aluno.getId())) {
             return (Map<Aluno, GradeDeCursos>) historico.get(aluno);
         } else {
             return null;
