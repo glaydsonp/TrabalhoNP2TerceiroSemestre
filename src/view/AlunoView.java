@@ -8,7 +8,7 @@ import model.CorpoDeAlunos;
 public class AlunoView {
 
     public int escolherOpcao() {
-        System.out.println("Digite 1 para inserir um novo aluno.\nDigite 2 para voltar ao menu principal: ");
+        System.out.println("\n1 - Para inserir um novo aluno.\n2 - Para voltar ao menu principal. ");
         Scanner in = new Scanner(System.in);
         return in.nextInt();
     }
@@ -17,16 +17,5 @@ public class AlunoView {
         System.out.println(quadro);
     }
 
-    public Aluno pedirAluno() {
-
-        System.out.println("Entre com os dados do aluno");
-
-        Scanner in = new Scanner(System.in);
-        System.out.println("ID: ");
-        String novoId = in.nextLine();
-        System.out.println("Nome: ");
-        String novoNome = in.nextLine();
-
-        return new Aluno(novoId, novoNome);
-    }
+    
 }
