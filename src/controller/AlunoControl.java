@@ -61,7 +61,7 @@ public class AlunoControl {
     
     public Aluno pedirAluno() throws InputNameWithSpecialCharactersException {
         
-        System.out.println("\nEntre com os dados do aluno:");
+        System.out.print("\nEntre com os dados do aluno:");
         Scanner in = new Scanner(System.in);
         System.out.print("ID: ");
         String novoId = in.nextLine();
