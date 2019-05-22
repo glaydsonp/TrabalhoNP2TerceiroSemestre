@@ -8,16 +8,18 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
+import model.entities.TipoDoCurso;
+import static model.entities.TipoDoCurso.GRADUACAO;
 
-public class CsvAluno {
+public class CsvCurso {
 
 //    public Map<String, String> corpoDeAlunos = new HashMap<>();
 
-    CorpoDeAlunos corpo = new CorpoDeAlunos();
+    GradeDeCursos grade = new GradeDeCursos();
     
     public String caminhoCsv() {
         String caminho = System.getProperty("user.dir");
-        caminho += File.separator + "alunos.csv";
+        caminho += File.separator + "cursos.csv";
         System.out.println(caminho);
         return caminho;
     }
@@ -46,20 +48,33 @@ public class CsvAluno {
 //    }
 
     //csv.4: metodo que le os ids e nomes dos alunos do alunos.csv 
-    public void lerCsvAluno() throws IOException {
-        String idAluno;
-        String nomeAluno;
+    public void lerCsvCurso() throws IOException {
+        String nomeDoCurso, tipo;
+        Integer anoDoCurso;
+        TipoDoCurso tipoDoCurso = null;
         try (FileInputStream fis = new FileInputStream(caminhoCsv())) {
             Scanner in = new Scanner(fis, "UTF-8");
             do {
                 String linha = in.nextLine();
                 String[] palavra = linha.split("\\;");
-                idAluno = palavra[0];
-                nomeAluno = palavra[1];
+                nomeDoCurso = palavra[0];
+                tipo = palavra[1];
+                if(null != tipo)switch (tipo) {
+                    case "GRADUACAO":
+                        tipoDoCurso = GRADUACAO;
+                        break;
+                    case "POS_GRADUACAO":
+                        tipoDoCurso = TipoDoCurso.POS_GRADUACAO;
+                        break;
+                    default:
+                        System.out.println("Tipo do curso inválido.");
+                        break;
+                }
+                anoDoCurso = Integer.parseInt(palavra[2]);
 //                corpo.put(idAluno, nomeAluno);
 //                in.nextLine();
-                Aluno aluno = new Aluno(idAluno, nomeAluno);
-                Faculdade.corpoDeAlunos.add(aluno);
+                Curso curso = new Curso(nomeDoCurso, anoDoCurso, tipoDoCurso);
+                Faculdade.gradeDeCursos.add(curso);
 //                System.out.println(aluno);
 //                System.out.println(idAluno);
 //                System.out.println(nomeAluno);

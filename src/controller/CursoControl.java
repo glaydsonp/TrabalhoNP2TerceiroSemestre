@@ -2,6 +2,7 @@ package controller;
 
 import model.Curso;
 import model.Faculdade;
+import model.GradeDeCursos;
 import view.CursoView;
 import view.MenuView;
 
@@ -47,11 +48,12 @@ public class CursoControl {
                 System.out.println("Curso nao foi inserido");
             }
         }
-        System.out.println("mostrando cursos");
-        view.mostrarCursos(Faculdade.gradeDeCursos);
+//        System.out.println("mostrando cursos");
+//        view.mostrarCursos(Faculdade.gradeDeCursos);
 
     }    
     public void listarCursos(){
+        GradeDeCursos grade = new GradeDeCursos();
         System.out.println("mostrando cursos");
         view.mostrarCursos(Faculdade.gradeDeCursos);
     }

@@ -21,13 +21,8 @@ public class GradeDeCursos {
             return false;
         }
     }
-//    
-//    public Curso put(Curso curso){
-//        relatorios.put(curso, new RelatorioDeNotas());
-//        return null;
-//    }
 
-    public Set<Curso> getCursos() {
+   public Set<Curso> getCursos() {
         return relatorios.keySet();
     }
 

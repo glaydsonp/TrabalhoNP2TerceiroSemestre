@@ -3,6 +3,7 @@ package view;
 import java.util.Scanner;
 import model.Curso;
 import model.GradeDeCursos;
+import model.ListaCurso;
 import model.entities.TipoDoCurso;
 
 public class CursoView {
@@ -13,7 +14,7 @@ public class CursoView {
         return in.nextInt();
     }
 
-    public void mostrarCursos(GradeDeCursos grade) {
+    public void mostrarCursos(ListaCurso grade) {
         System.out.println(grade);
     }
 

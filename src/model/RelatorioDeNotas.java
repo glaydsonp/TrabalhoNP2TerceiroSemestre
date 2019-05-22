@@ -20,5 +20,6 @@ public class RelatorioDeNotas {
         String res = "";
         res = relatorio.stream().map((r) -> r + "\n").reduce(res, String::concat);
         return "\nRelatorio de Notas: " + res;
+//        return "";
     }
 }

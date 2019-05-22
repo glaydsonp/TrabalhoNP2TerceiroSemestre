@@ -1,6 +1,7 @@
 package controller;
 
 import model.Aluno;
+//import model.CorpoDeAlunos;
 import model.Faculdade;
 import view.AlunoView;
 import view.MenuView;
@@ -48,6 +49,7 @@ public class AlunoControl {
     }
 
     public void listarAlunos() {
+//        CorpoDeAlunos corpo = new CorpoDeAlunos();
         System.out.println("mostrando alunos");
         view.mostrarAlunos(Faculdade.corpoDeAlunos);
     }

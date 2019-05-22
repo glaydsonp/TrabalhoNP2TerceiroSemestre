@@ -4,7 +4,8 @@ public class Faculdade {
 
     GradeDeCursos grade;
     public static CorpoDeAlunos corpoDeAlunos = new CorpoDeAlunos();
-    public static GradeDeCursos gradeDeCursos = new GradeDeCursos();
+//    public static GradeDeCursos gradeDeCursos = new GradeDeCursos();
+    public static ListaCurso gradeDeCursos = new ListaCurso();
 
     public Faculdade() {
         grade = new GradeDeCursos();

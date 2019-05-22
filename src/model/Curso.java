@@ -72,7 +72,7 @@ public class Curso implements Comparable<Curso> {
 
     @Override
     public String toString() {
-        return "Curso\n" + 
+        return "\nCurso\n" + 
                 "Nome do curso: " + nomeDoCurso + 
                 "\nAno do curso: " + anoDoCurso + 
                 "\nTipo: " + tipoDoCurso;
