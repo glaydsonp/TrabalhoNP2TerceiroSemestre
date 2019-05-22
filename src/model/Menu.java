@@ -15,7 +15,7 @@ public class Menu {
     
     @Override
     public String toString() {
-        return "Menu{\n" + 
+        return "--------- MENU ---------\n" + 
                 "1 - Listar os cursos dados\n" +
                 "2 - Listar todos os alunos inscritos\n" +
                 "3 - Listar o histórico de um aluno em específico\n" + 
@@ -23,8 +23,7 @@ public class Menu {
                 "5 - Incluir um novo aluno\n" +
                 "6 - Incluir um novo curso\n" +
                 "7 - Incluir um novo rendimento\n" +
-                "8 - Para fechar o programa\n" +
-                '}';
+                "8 - Para fechar o programa\n";
     }
     
 }

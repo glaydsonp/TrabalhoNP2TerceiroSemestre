@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
@@ -14,3 +15,16 @@
         </group>
     </open-files>
 </project-private>
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/home/revy/NetBeansProjects/TrabalhoNP2TerceiroSemestre-master/src/controller/AlunoControl.java</file>
+            <file>file:/home/revy/NetBeansProjects/TrabalhoNP2TerceiroSemestre-master/src/model/Menu.java</file>
+            <file>file:/home/revy/NetBeansProjects/TrabalhoNP2TerceiroSemestre-master/src/view/Main.java</file>
+        </group>
+    </open-files>
+</project-private>
+>>>>>>> d3ed1f963d484b7e00ee5f3bc706f0c554d37270

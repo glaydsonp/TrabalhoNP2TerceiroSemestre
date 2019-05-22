@@ -9,7 +9,7 @@ import model.entities.TipoDoCurso;
 public class CursoView {
 
     public int escolherOpcao() {
-        System.out.println("Digite 1 para inserir um novo curso.\nDigite 2 para voltar ao menu principal: ");
+        System.out.println("\n1 - Para inserir um novo curso.\n2 - Para voltar ao menu principal. ");
         Scanner in = new Scanner(System.in);
         return in.nextInt();
     }
