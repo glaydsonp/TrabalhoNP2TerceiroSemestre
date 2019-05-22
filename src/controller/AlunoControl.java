@@ -38,17 +38,22 @@ public class AlunoControl {
 
     public void inserirAluno() {
         boolean alunoInserido = false;
-
         while (alunoInserido == false) {
-            Aluno aluno = view.pedirAluno();
-            alunoInserido = Faculdade.corpoDeAlunos.add(aluno);
-            if (alunoInserido == false) {
-                System.out.println("Aluno nao foi inserido");
+            try {
+                Aluno aluno = this.pedirAluno();
+                alunoInserido = Faculdade.corpoDeAlunos.add(aluno);
+                
+                if (alunoInserido == false) {
+                    System.out.println("Aluno nao foi inserido");
+                }
+            } catch (InputNameWithSpecialCharactersException e) {
+                System.out.println("Erro: " + e.getMessage());
             }
         }
     }
 
-    public void listarAlunos() {
+
+public void listarAlunos() {
         System.out.println("mostrando alunos");
         view.mostrarAlunos(Faculdade.corpoDeAlunos);
     }

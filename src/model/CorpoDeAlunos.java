@@ -29,7 +29,7 @@ public class CorpoDeAlunos {
     public String toString() {
         String listaAlunos = "";
         for (String id : alunos.keySet()) {
-            listaAlunos += "ID: " + id;
+            listaAlunos += "\nID: " + id;
             listaAlunos += "\nNome: " + alunos.get(id);
         }
         return "Corpo de Alunos\n" + listaAlunos;
