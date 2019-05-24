@@ -38,7 +38,7 @@ public class HistoricoControl {
     private void getHistorico() {
         Boolean aluno = false;
         while (aluno == false){
-            String id = view.pedeAluno();
+            String id = view.pedirHistorico();
             
             Historico historico = new Historico();
             Aluno aluno01 = new Aluno(id);

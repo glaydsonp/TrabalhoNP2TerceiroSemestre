@@ -12,8 +12,8 @@ public class Main {
         csvControl.lerCsvAluno();
         csvControl.lerCsvCurso();
 
-        MenuView start = new MenuView(); 
-        start.inicio();
+        MenuView menu = new MenuView(); 
+        menu.inicio();
                
     }
 }

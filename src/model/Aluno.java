@@ -9,6 +9,7 @@ public class Aluno implements Comparable<Aluno> {
     
     public Aluno(String id) {
         this.id = id;
+        this.nomeDoAluno = null ;
     }
 
     public Aluno(String id, String nomeDoAluno) {

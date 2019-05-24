@@ -3,6 +3,7 @@ package view;
 import controller.MenuControl;
 import controller.AlunoControl;
 import controller.CursoControl;
+import controller.HistoricoControl;
 import controller.RendimentoControl;
 
 public class MenuView {
@@ -10,6 +11,7 @@ public class MenuView {
     MenuControl view = new MenuControl();
     CursoControl curso = new CursoControl();
     AlunoControl alunos = new AlunoControl();
+    HistoricoControl historico = new HistoricoControl();
     RendimentoControl rendimento = new RendimentoControl();
 
     public int menu() {
@@ -64,7 +66,7 @@ public class MenuView {
     }
 
     public void listarHistorico() {
-        //TODO
+        historico.inicio();
     }
 
     public void listarRelatorio() {

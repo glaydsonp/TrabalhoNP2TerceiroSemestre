@@ -17,9 +17,10 @@ public class HistoricoView {
         //TODO   
     }
 
-    public String pedeAluno() {
+    public String pedirHistorico() {
         String id;
         System.out.println("Entre com o id do aluno que deseja exibir o histórico: ");
+        in.nextLine();
         id = in.nextLine();
 
         return id;
