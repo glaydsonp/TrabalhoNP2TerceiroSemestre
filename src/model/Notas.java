@@ -9,6 +9,7 @@ public class Notas {
     Map<Prova, Nota> notas;
 
     public Notas() {
+        notas = new TreeMap<>();
     }
 
     public Notas(Nota nota, Curso curso) {
