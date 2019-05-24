@@ -43,7 +43,7 @@ public class Notas {
             res += prova + ": " + notas.get(prova) + "\n";
         }
 
-        return "Notas: " + res;
+        return res;
     }
 
 

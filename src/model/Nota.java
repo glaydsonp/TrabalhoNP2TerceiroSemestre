@@ -37,7 +37,7 @@ public class Nota {
 
     @Override
     public String toString() {
-        return "Nota [valor=" + df.format(nota) + "]";
+        return df.format(nota);
     }
 
 }

@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.util.Scanner;
 import model.entities.Prova;
 import model.entities.TipoDoCurso;
-import static model.entities.TipoDoCurso.GRADUACAO;
 
 public class CsvCurso {
 
@@ -17,7 +16,7 @@ public class CsvCurso {
         return caminho;
     }
 
-    //csv.4: metodo que le os ids e nomes dos alunos do cursos.csv 
+    //Método que lê o nome, tipo e ano dos cursos cadastrados no arquivo cursos.csv 
     public void lerCsvCurso() throws IOException {
 
         String nomeDoCurso, tipo;
@@ -34,10 +33,10 @@ public class CsvCurso {
                 if (null != tipo) {
                     switch (tipo) {
                         case "GRADUACAO":
-                            tipoDoCurso = GRADUACAO;
+                            tipoDoCurso = TipoDoCurso.GRADUACAO;
                             break;
                         case "POS_GRADUACAO":
-                            tipoDoCurso = TipoDoCurso.POS_GRADUACAO;
+                            tipoDoCurso = TipoDoCurso.POSGRADUACAO;
                             break;
                         default:
                             System.out.println("Tipo do curso inválido.");
@@ -70,7 +69,8 @@ public class CsvCurso {
 
         FileInputStream fisCurso = new FileInputStream(cursoCaminho);
         Scanner inCurso = new Scanner(fisCurso, "UTF-8");
-
+        Rendimento rend = new Rendimento(curso);
+        
         if (inCurso.hasNextLine()) {
             do {
                 String linhaCurso = inCurso.nextLine();
@@ -88,19 +88,25 @@ public class CsvCurso {
                 Nota notaExame = new Nota(exame);
 
                 Notas notas = new Notas();
-
-                notas.add(Prova.NP1, notaNp1);
-                notas.add(Prova.NP2, notaNp2);
-                notas.add(Prova.SUB, notaSub);
-                notas.add(Prova.EXAME, notaExame);
                 
-                System.out.println(curso.toString());
+                rend.setNotas(Prova.NP1, notaNp1);
+                rend.setNotas(Prova.NP2, notaNp2);
+                rend.setNotas(Prova.SUB, notaSub);
+                rend.setNotas(Prova.EXAME, notaExame);
+
+//                notas.add(Prova.NP1, notaNp1);
+//                notas.add(Prova.NP2, notaNp2);
+//                notas.add(Prova.SUB, notaSub);
+//                notas.add(Prova.EXAME, notaExame);
+                
+                System.out.println("------");
                 System.out.println("Id: " + idDoAluno);
                 System.out.println("Nome: " + Faculdade.corpoDeAlunos.getAluno(idDoAluno));
-                System.out.println("NP1: " + np1);
-                System.out.println("NP2: " + np2);
-                System.out.println("SUB: " + sub);
-                System.out.println("EXAME: " + exame);
+//                System.out.println("NP1: " + np1);
+//                System.out.println("NP2: " + np2);
+//                System.out.println("SUB: " + sub);
+//                System.out.println("EXAME: " + exame);
+                System.out.println(rend.toString());
             } while (inCurso.hasNextLine());
         }
 

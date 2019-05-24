@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/CsvAluno.java</file>
+            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Rendimento.java</file>
+            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Historico.java</file>
+            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/CsvCurso.java</file>
+            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/view/CursoView.java</file>
+            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Media.java</file>
+            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Nota.java</file>
+            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Notas.java</file>
+        </group>
     </open-files>
 </project-private>

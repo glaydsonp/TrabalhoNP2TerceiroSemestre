@@ -36,7 +36,7 @@ public class CursoView {
                 novoTipo = "GRADUACAO";
                 condicao = true;
             } else if (tipoInt == 2) {
-                novoTipo = "POS_GRADUACAO";
+                novoTipo = "POSGRADUACAO";
                 condicao = true;
             } else {
                 System.out.println("Tipo Inválido.");

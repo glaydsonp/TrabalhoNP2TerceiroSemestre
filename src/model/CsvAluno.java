@@ -10,6 +10,7 @@ public class CsvAluno {
     
     public String caminhoCsv() {
         String caminho = System.getProperty("user.dir");
+        caminho += File.separator + "files";
         caminho += File.separator + "alunos.csv";
         return caminho;
     }

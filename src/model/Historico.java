@@ -24,12 +24,12 @@ public class Historico {
     }
 
     public void add(Curso curso) {
-        grade.add(curso);
+        Faculdade.gradeDeCursos.add(curso);
     }
 
     public void add(Aluno aluno, Curso curso) {
         if (historico.containsKey(aluno)) {
-            grade.add(curso);
+            Faculdade.gradeDeCursos.add(curso);
         }
     }
 

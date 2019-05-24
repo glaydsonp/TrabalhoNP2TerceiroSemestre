@@ -23,12 +23,13 @@ public class Media {
     public double getMedia(){
         return mediaFinal;
     }
+    
     public double getMedia(Nota nota, Curso curso) {
         switch (String.valueOf(curso.getTipoDoCurso())) {
             case "GRADUACAO":
                 mediaPos(nota);
                 break;
-            case "POS_GRADUACAO":
+            case "POSGRADUACAO":
                 mediaGrad(nota);
                 break;
             default:

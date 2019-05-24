@@ -34,7 +34,12 @@ public class Rendimento {
         } else {
             return "REPROVADO";
         }
-//        return null;
+    }
+    
+    public Double getMedia(){
+        Double media = 0.0;
+        
+        return media;
     }
 
     @Override
