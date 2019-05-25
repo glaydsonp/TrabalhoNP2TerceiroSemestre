@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
-    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="1">
+        <file>
+            <url>src/view/CursoView.java</url>
+            <bookmark id="1">
+                <name/>
+                <line>18</line>
+                <key/>
+            </bookmark>
+        </file>
+    </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/CsvAluno.java</file>
-            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Rendimento.java</file>
-            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Historico.java</file>
-            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/CsvCurso.java</file>
-            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/view/CursoView.java</file>
-            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Media.java</file>
-            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Nota.java</file>
-            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/model/Notas.java</file>
+            <file>file:/home/revy/NetBeansProjects/TrabalhoNP2TerceiroSemestre/src/view/AlunoView.java</file>
+            <file>file:/home/revy/NetBeansProjects/TrabalhoNP2TerceiroSemestre/src/model/exceptions/CheckSpecialCharactersInFields.java</file>
+            <file>file:/home/revy/NetBeansProjects/TrabalhoNP2TerceiroSemestre/src/controller/CursoControl.java</file>
+            <file>file:/home/revy/NetBeansProjects/TrabalhoNP2TerceiroSemestre/src/view/CursoView.java</file>
+            <file>file:/home/revy/NetBeansProjects/TrabalhoNP2TerceiroSemestre/src/model/exceptions/InputWithSpecialCharactersException.java</file>
+            <file>file:/home/revy/NetBeansProjects/TrabalhoNP2TerceiroSemestre/src/controller/AlunoControl.java</file>
         </group>
     </open-files>
 </project-private>

@@ -1,12 +1,13 @@
 package controller;
 
+import model.exceptions.CheckSpecialCharactersInFields;
 import java.util.Scanner;
 import model.Aluno;
 //import model.CorpoDeAlunos;
 import model.Faculdade;
 import view.AlunoView;
 import view.MenuView;
-import model.exceptions.InputNameWithSpecialCharactersException;
+import model.exceptions.InputWithSpecialCharactersException;
 
 public class AlunoControl {
 
@@ -46,19 +47,19 @@ public class AlunoControl {
                 if (alunoInserido == false) {
                     System.out.println("Aluno nao foi inserido");
                 }
-            } catch (InputNameWithSpecialCharactersException e) {
+            } catch (InputWithSpecialCharactersException e) {
                 System.out.println("Erro: " + e.getMessage());
             }
         }
     }
 
 
-public void listarAlunos() {
+    public void listarAlunos() {
         System.out.println("mostrando alunos");
         view.mostrarAlunos(Faculdade.corpoDeAlunos);
     }
 
-    public Aluno pedirAluno() throws InputNameWithSpecialCharactersException {
+    public Aluno pedirAluno() throws InputWithSpecialCharactersException {
 
         System.out.println("\nEntre com os dados do aluno:");
         Scanner in = new Scanner(System.in);
@@ -67,7 +68,7 @@ public void listarAlunos() {
         System.out.print("Nome: ");
         String novoNome = in.nextLine();
 
-        CheckSpecialCharactersInFields error = new CheckSpecialCharactersInFields(novoId, novoNome);
+        CheckSpecialCharactersInFields error = new CheckSpecialCharactersInFields(novoNome, novoId);
         error.VerifyId();
         error.VerifyName();
 
