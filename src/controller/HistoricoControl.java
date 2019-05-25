@@ -41,10 +41,10 @@ public class HistoricoControl {
             String id = view.pedirHistorico();
             
             Historico historico = new Historico();
-            Aluno aluno01 = new Aluno(id);
+//            Aluno aluno01 = new Aluno(id);
             
-            if(aluno01 != null){
-                System.out.println(historico.getHistorico(aluno01));
+            if(id != null){
+                System.out.println(historico.getHistorico(id));
                 aluno = true;
             } else {
                 System.out.println("Id inválido. Insira novamente.");

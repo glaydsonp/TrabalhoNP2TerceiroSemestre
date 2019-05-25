@@ -6,10 +6,16 @@ import java.util.TreeMap;
 
 public class GradeDeCursos {
 
-    Map<Curso, Rendimento> grade;
-
+    Map<Curso, Rendimento> grade = new TreeMap<>();
+    
     public GradeDeCursos() {
-        grade = new TreeMap<>();
+
+    }
+    
+    public GradeDeCursos(Curso curso, Rendimento rendimento) {
+        ListaCurso lista = new ListaCurso();
+        lista.add(curso);
+        this.grade.put(curso, rendimento);
     }
 
     public boolean add(Curso curso) {
@@ -21,25 +27,33 @@ public class GradeDeCursos {
             return false;
         }
     }
+    
+    public GradeDeCursos addGradeCurso(Curso curso, Rendimento rend) {
+        if (!grade.containsKey(curso)) {
+            GradeDeCursos gradeCursos = new GradeDeCursos();
+            grade.put(curso, rend);
+            return gradeCursos;
+//            grade.put(curso, rend);
+//            return grade;
+        } else {
+            System.out.println("Curso já existente.");
+            return null;
+        }
+    }
 
-   public Set<Curso> getCursos() {
+    public Set<Curso> getCursos() {
         return grade.keySet();
     }
 
     public Rendimento getRelatorio(Curso curso) {
         return grade.get(curso);
     }
-//
-//    public void add(Rendimento rendimento) {
-//        Rendimento relatorio = grade.get(rendimento.getCurso());
-//        relatorio.add(rendimento);
-//    }
 
     @Override
     public String toString() {
-        String listaCursos = ""; 
-        for (Curso id : grade.keySet()){
-            listaCursos += "Curso: " + id + "\n"; 
+        String listaCursos = "";
+        for (Curso id : grade.keySet()) {
+            listaCursos += "Curso: " + id + "\n";
             listaCursos += "Rendimento: " + grade.get(id) + "\n";
         }
         return "GradeDeCursos \n" + grade;

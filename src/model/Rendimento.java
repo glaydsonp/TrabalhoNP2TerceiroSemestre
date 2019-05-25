@@ -8,12 +8,13 @@ public class Rendimento {
     Notas notas;
     Media media = new Media();
 
-    public Rendimento(Curso curso) {
-        this.curso = curso;
+    public Rendimento() {
         this.notas = new Notas();
     }
 
-    public Rendimento() {
+    public Rendimento(Curso curso) {
+        this.curso = curso;
+        this.notas = new Notas();
     }
 
     public Curso getCurso() {
@@ -27,24 +28,23 @@ public class Rendimento {
     public void setNotas(Prova prova, Nota nota) {
         this.notas.add(prova, nota);
     }
-    
-    public String getStatusAluno(){
-        if(media.getMedia() >= 5.0){
+
+    public String getStatusAluno() {
+        if (media.getMedia() >= 5.0) {
             return "APROVADO";
         } else {
             return "REPROVADO";
         }
     }
-    
-    public Double getMedia(){
+
+    public Double getMedia() {
         Double media = 0.0;
-        
+
         return media;
     }
 
     @Override
     public String toString() {
-        return "\nRendimento\n" + curso + "\n" + notas + "]";
+        return "\nRendimento " + notas + "]";
     }
-
 }

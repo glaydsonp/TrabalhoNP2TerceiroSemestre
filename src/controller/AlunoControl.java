@@ -17,7 +17,7 @@ public class AlunoControl {
     public void inicio() {
         boolean continua = true;
         while (continua) {
-            int escolha = menu();
+            int escolha = view.escolherOpcao();
             switch (escolha) {
                 case 1:
                     inserirAluno();
@@ -33,9 +33,9 @@ public class AlunoControl {
         System.exit(0);
     }
 
-    public int menu() {
-        return view.escolherOpcao();
-    }
+//    public int menu() {
+//        return view.escolherOpcao();
+//    }
 
     public void inserirAluno() {
         boolean alunoInserido = false;
