@@ -9,8 +9,8 @@ import model.exceptions.InputNameWithSpecialCharactersException;
 public class CheckSpecialCharactersInFields {
     
     private String name, id;
-    private final String NameBannedSpecialCharacters = "[!#@$%¨&*0-9].*";
-    private final String IDBannedSpecialCharacters = "[!#@$%¨&*].*";
+    private final String NameBannedSpecialCharacters = "[^a-zA-Z]+";
+    private final String IDBannedSpecialCharacters = "[^0-9a-zA-Z]+";
     
     public CheckSpecialCharactersInFields(){
         
