@@ -4,6 +4,7 @@ package controller;
 import java.util.InputMismatchException;
 import model.Aluno;
 import model.Historico;
+import model.exceptions.InputWithSpecialCharactersException;
 import view.HistoricoView;
 import view.MenuView;
 
@@ -11,7 +12,7 @@ public class HistoricoControl {
     
     HistoricoView view = new HistoricoView();
     
-    public void inicio() {
+    public void inicio() throws InputWithSpecialCharactersException {
         boolean continua = true;
         do {
             try {

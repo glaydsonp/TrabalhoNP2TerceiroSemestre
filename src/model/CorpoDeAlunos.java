@@ -22,7 +22,7 @@ public class CorpoDeAlunos {
     }
 
     public String getAluno(String id) {
-        return alunos.get(id);
+        return Faculdade.corpoDeAlunos.alunos.get(id);
     }
 
     @Override

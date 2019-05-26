@@ -12,11 +12,11 @@ import view.CursoView;
 import view.MenuView;
 
 public class CursoControl {
-    
+
     Faculdade faculdade = new Faculdade();
     CursoView view = new CursoView();
 
-    public void inicio() {
+    public void inicio() throws InputWithSpecialCharactersException {
         boolean continua = true;
         do {
             try {
@@ -48,51 +48,48 @@ public class CursoControl {
     }
 
     public void inserirCurso() {
-        boolean cursoInserido = false;
+        Boolean cursoInserido = false;
 
         while (cursoInserido == false) {
 
             try {
                 Curso curso = this.pedirCurso();
-                
+
                 cursoInserido = Faculdade.gradeDeCursos.add(curso);
                 if (cursoInserido == false) {
                     System.out.println("Curso nao foi inserido");
-                } 
+                }
             } catch (InputWithSpecialCharactersException ex) {
                 System.out.println("Erro: " + ex.getMessage());
             } catch (InputMismatchException e){
                 System.out.println("Erro: Por favor insira inteiros para o ano do curso.");
             }
         }
-//        System.out.println("mostrando cursos");
-//        view.mostrarCursos(Faculdade.gradeDeCursos);
+    }
 
-    }    
-    
-    public void listarCursos(){
+    public void listarCursos() {
         GradeDeCursos grade = new GradeDeCursos();
         System.out.println("---- Exibindo cursos ---");
         view.mostrarCursos(Faculdade.gradeDeCursos);
     }
-    
+
     public Curso pedirCurso() throws InputWithSpecialCharactersException, InputMismatchException {
-    String novoTipo = "";
-    Boolean condicao = false;
+        String novoTipo = "";
+        Boolean condicao = false;
 
-    System.out.println("\nEntre com os dados do curso:");
+        System.out.println("\nEntre com os dados do curso:");
 
-    Scanner in = new Scanner(System.in);
-    System.out.print("Nome: ");
-    String novoNome = in.nextLine();
-    System.out.print("Ano: ");
-    Integer novoAno = in.nextInt();
-    
+        Scanner in = new Scanner(System.in);
+        System.out.print("Nome: ");
+        String novoNome = in.nextLine();
+        System.out.print("Ano: ");
+        Integer novoAno = in.nextInt();
+
         do {
             System.out.println("Tipo:");
             System.out.println("1 - Para Curso de Graduação");
             System.out.println("2 - Para Curso de Pós-Graduação");
-            
+
             Integer tipoInt = in.nextInt();
             switch (tipoInt) {
                 case 1:
@@ -107,7 +104,7 @@ public class CursoControl {
                     System.out.println("Tipo Inválido.");
                     break;
             }
-            
+
             String testarAno = novoAno.toString();
             CheckSpecialCharactersInFields error = new CheckSpecialCharactersInFields(novoNome, testarAno, novoTipo);
             error.VerifyName();
@@ -115,6 +112,6 @@ public class CursoControl {
             error.VerifyCourseType();
         } while (condicao == false);
 
-    return new Curso(novoNome, novoAno, TipoDoCurso.valueOf(novoTipo));
+        return new Curso(novoNome, novoAno, TipoDoCurso.valueOf(novoTipo));
     }
 }

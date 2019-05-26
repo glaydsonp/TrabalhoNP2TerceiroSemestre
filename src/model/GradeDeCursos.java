@@ -56,6 +56,6 @@ public class GradeDeCursos {
             listaCursos += "Curso: " + id + "\n";
             listaCursos += "Rendimento: " + grade.get(id) + "\n";
         }
-        return "GradeDeCursos \n" + grade;
+        return "\nGradeDeCursos \n" + grade;
     }
 }

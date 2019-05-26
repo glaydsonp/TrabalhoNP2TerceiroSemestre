@@ -37,40 +37,40 @@ import java.util.ArrayList;
 ////        listaAlunos.add(aluno3);
 ////        listaAlunos.add(aluno4);
 ////        
-////aqui sera feito o equivalente ao que foi feito em teste, 
-////porem criado, puxando o corpodealunos
-//        for(corpoDeAlunos)
+//aqui sera feito o equivalente ao que foi feito em teste, 
+//porem criado, puxando o corpodealunos
+//        for(corpoDeAlunos){
 //        listaAlunos.add(aluno);
-//        
-//        //incializacao do filewriter
-//        FileWriter fileWriter = null;
-//
-//        try {
-//            //aqui vai o nome do arquivo dentro de ( )
-//            fileWriter = new FileWriter("alunosa1111111111111.csv");
-//            
-//            //escreve uma lista de aluno para o csv
+//        }
+        //incializacao do filewriter
+        FileWriter fileWriter = null;
+
+        try {
+            //aqui vai o nome do arquivo dentro de ( )
+            fileWriter = new FileWriter("alunosa1111111111111.csv");
+            
+            //escreve uma lista de aluno para o csv
 //            for (Aluno aaluno : listaAlunos) {
 //                fileWriter.append(aaluno.getId());
 //                fileWriter.append(pontovirgula);
 //                fileWriter.append(aaluno.getNomeDoAluno());
 //                fileWriter.append(pulalinha);
 //            }
-//			
-//
-//            System.out.println("Deu bom!"); 
-//
-//        } catch (IOException e) {
-//            System.out.println("Erro ao escrever.");
-//        } finally {
-//
-//            try {
-//                fileWriter.flush();
-//                fileWriter.close();
-//            } catch (IOException e) {
-//                System.out.println("Erro durante flush/close.");
-//            }
-//
-//        }
-//    }
-//    }
+			
+
+            System.out.println("Deu bom!"); 
+
+        } catch (IOException e) {
+            System.out.println("Erro ao escrever.");
+        } finally {
+
+            try {
+                fileWriter.flush();
+                fileWriter.close();
+            } catch (IOException e) {
+                System.out.println("Erro durante flush/close.");
+            }
+
+        }
+    }
+    }
