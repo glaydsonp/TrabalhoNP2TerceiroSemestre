@@ -1,6 +1,15 @@
 
 package model.exceptions;
 
-public class DomainExceptions {
+import java.io.IOException;
+
+public class DomainExceptions extends IOException{
     
+    public DomainExceptions(){
+        super();
+    }
+    
+    public DomainExceptions(String message){
+        super(message);
+    }
 }

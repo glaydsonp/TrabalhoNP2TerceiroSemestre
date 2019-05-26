@@ -1,6 +1,7 @@
 
 package controller;
 
+import java.util.InputMismatchException;
 import model.Curso;
 import model.Faculdade;
 import view.CursoView;
@@ -13,7 +14,8 @@ public class RendimentoControl {
     public void inicio() {
         boolean continua = true;
         do {
-            int escolha = menu();
+            try {
+                int escolha = menu();
             switch (escolha) {
                 case 1:
                     inserirRendimento();
@@ -23,11 +25,17 @@ public class RendimentoControl {
                     start.inicio();
                     break;
                 default:
-                    System.out.println("opcao nao listada");
-
-            }}while (continua == true);
-
-        
+                    throw new InputMismatchException("Opção não listada! Insira uma das opções acima.");
+               }
+            } catch (InputMismatchException e) {
+                if(e.getMessage() != null){
+                    System.out.println("Erro: " + e.getMessage());
+                } else{
+                    System.out.println("Erro: Opção não listada! Insira inteiros para escolher uma opção.");
+                }
+            }
+            
+        } while (continua == true);
         System.exit(0);
     }
 

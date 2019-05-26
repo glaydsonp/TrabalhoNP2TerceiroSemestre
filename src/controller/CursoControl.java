@@ -19,8 +19,9 @@ public class CursoControl {
     public void inicio() {
         boolean continua = true;
         do {
-            int escolha = menu();
-            switch (escolha) {
+            try {
+                int escolha = menu();
+                switch (escolha) {
                 case 1:
                     inserirCurso();
                     break;
@@ -29,11 +30,16 @@ public class CursoControl {
                     start.inicio();
                     break;
                 default:
-                    System.out.println("Opção não listada.");
-
+                    throw new InputMismatchException("Opção não listada! Insira uma das opções acima.");
+                }
+            } catch (InputMismatchException e) {
+                if(e.getMessage() != null){
+                    System.out.println("Erro: " + e.getMessage());
+                } else{
+                    System.out.println("Erro: Opção não listada! Insira inteiros para escolher uma opção.");
+                }
             }
         } while (continua == true);
-        
         System.exit(0);
     }
 
@@ -55,6 +61,8 @@ public class CursoControl {
                 } 
             } catch (InputWithSpecialCharactersException ex) {
                 System.out.println("Erro: " + ex.getMessage());
+            } catch (InputMismatchException e){
+                System.out.println("Erro: Por favor insira inteiros para o ano do curso.");
             }
         }
 //        System.out.println("mostrando cursos");
@@ -64,7 +72,7 @@ public class CursoControl {
     
     public void listarCursos(){
         GradeDeCursos grade = new GradeDeCursos();
-        System.out.println("mostrando cursos");
+        System.out.println("---- Exibindo cursos ---");
         view.mostrarCursos(Faculdade.gradeDeCursos);
     }
     

@@ -1,5 +1,6 @@
 package controller;
 
+import java.util.InputMismatchException;
 import model.exceptions.CheckSpecialCharactersInFields;
 import java.util.Scanner;
 import model.Aluno;
@@ -17,8 +18,9 @@ public class AlunoControl {
     public void inicio() {
         boolean continua = true;
         while (continua) {
-            int escolha = view.escolherOpcao();
-            switch (escolha) {
+            try {
+                int escolha = view.escolherOpcao();
+                switch (escolha) {
                 case 1:
                     inserirAluno();
                     break;
@@ -27,8 +29,16 @@ public class AlunoControl {
                     start.inicio();
                     break;
                 default:
-                    System.out.println("opcao nao listada");
+                    System.out.println("Opção não listada! Insira uma das opções acima.");
+                }
+            } catch (InputMismatchException e) {
+                if(e.getMessage() != null){
+                    System.out.println("Erro: " + e.getMessage());
+                } else{
+                    System.out.println("Erro: Opção não listada! Insira inteiros para escolher uma opção.");
+                }
             }
+            
         }
         System.exit(0);
     }

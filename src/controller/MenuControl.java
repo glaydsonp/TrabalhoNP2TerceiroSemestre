@@ -9,6 +9,5 @@ public class MenuControl {
         Menu chamaMenu = new Menu();
         System.out.println(chamaMenu);
         return chamaMenu.escolherOpcao();
-        
     }
 }

@@ -1,6 +1,7 @@
 
 package controller;
 
+import java.util.InputMismatchException;
 import model.Aluno;
 import model.Historico;
 import view.HistoricoView;
@@ -13,19 +14,28 @@ public class HistoricoControl {
     public void inicio() {
         boolean continua = true;
         do {
-            int escolha = menu();
-            switch (escolha) {
-                case 1:
-                    getHistorico();
-                    break;
-                case 2:
-                    MenuView start = new MenuView();
-                    start.inicio();
-                    break;
-                default:
-                    System.out.println("opcao nao listada");
-
-            }}while (continua == true);
+            try {
+                int escolha = menu();
+                switch (escolha) {
+                    case 1:
+                        getHistorico();
+                        break;
+                    case 2:
+                        MenuView start = new MenuView();
+                        start.inicio();
+                        break;
+                    default:
+                       throw new InputMismatchException("Opção não listada! Insira uma das opções acima.");
+                }
+            } catch (InputMismatchException e) {
+                if(e.getMessage() != null){
+                    System.out.println("Erro: " + e.getMessage());
+                } else{
+                    System.out.println("Erro: Opção não listada! Insira inteiros para escolher uma opção.");
+                }
+            }
+            
+        } while (continua == true);
 
         
         System.exit(0);
