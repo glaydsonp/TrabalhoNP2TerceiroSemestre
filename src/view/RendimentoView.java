@@ -1,10 +1,6 @@
 package view;
 
-import static java.lang.System.in;
 import java.util.Scanner;
-import model.Nota;
-import model.Rendimento;
-import model.entities.Prova;
 
 public class RendimentoView {
 
@@ -14,20 +10,22 @@ public class RendimentoView {
         return in.nextInt();
     }
 
+    //Método tipo Double[] (vetor de variáveis tipo double) que retornará as notas digitadas no console
     public Double[] pedirNotas() {
         Scanner in = new Scanner(System.in);
-        
+
+        //Cria um vetor que irá receber as notas digitadas via console
         Double notas[] = null;
         
         System.out.println("Insira a nota da NP1: ");
         notas[0] = in.nextDouble();
         System.out.println("Insira a nota da NP2: ");
-        notas[1]= in.nextDouble();
+        notas[1] = in.nextDouble();
         System.out.println("Insira a nota da Prova SUB: ");
         notas[2] = in.nextDouble();
         System.out.println("Insira a nota da Prova Exame: ");
         notas[3] = in.nextDouble();
-        
+
         return notas;
     }
 }

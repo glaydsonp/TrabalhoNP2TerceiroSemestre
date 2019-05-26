@@ -22,9 +22,11 @@ public class CursoControl {
             int escolha = menu();
             switch (escolha) {
                 case 1:
+                    //Inicia o método de inserir curso
                     inserirCurso();
                     break;
                 case 2:
+                    //Retorna ao menu principal
                     MenuView start = new MenuView();
                     start.inicio();
                     break;
@@ -41,6 +43,9 @@ public class CursoControl {
         return view.escolherOpcao();
     }
 
+    /*
+     Esse método irá inserir um curso novo no sistema
+     */
     public void inserirCurso() {
         Boolean cursoInserido = false;
 
@@ -49,22 +54,31 @@ public class CursoControl {
             try {
                 Curso curso = this.pedirCurso();
 
+                /*
+                 Essa variável retorna verdadeira se o curso for inserido
+                 Retorna falso e quebra o while se o curso não tiver sido inserido
+                 O curso não será inserido quando já houver um curso
+                 Com os mesmos atributos já cadastrado
+                 */
                 cursoInserido = Faculdade.gradeDeCursos.add(curso);
                 if (cursoInserido == false) {
                     System.out.println("Curso nao foi inserido");
                 }
-            } catch (InputWithSpecialCharactersException ex) {
+            } //Pega a exceção caso o usuário digite caracteres não permitidos no campo nome ou ano
+            catch (InputWithSpecialCharactersException ex) {
                 System.out.println("Erro: " + ex.getMessage());
             }
         }
     }
 
+    //Método que lista todos os cursos cadastrados
     public void listarCursos() {
         GradeDeCursos grade = new GradeDeCursos();
         System.out.println("mostrando cursos");
         view.mostrarCursos(Faculdade.gradeDeCursos);
     }
 
+    //Método que pede os dados do aluno a ser inserido
     public Curso pedirCurso() throws InputWithSpecialCharactersException, InputMismatchException {
         String novoTipo = "";
         Boolean condicao = false;
@@ -77,6 +91,10 @@ public class CursoControl {
         System.out.print("Ano: ");
         Integer novoAno = in.nextInt();
 
+        /*
+        Laço para o usuário entrar com o tipo do curso 
+        Só será quebrando quando o usuário digitar um tipo do curso válido
+        */
         do {
             System.out.println("Tipo:");
             System.out.println("1 - Para Curso de Graduação");
@@ -98,12 +116,22 @@ public class CursoControl {
             }
 
             String testarAno = novoAno.toString();
+
+            /*
+             Classe CheckSpecialCharactersInFields vai checar todos os caracteres inseridos pelo usuário
+             Irá verificar e, quando aplicado, lançará uma exceção que dirá se existe caracter não permitido
+             Checa todos os valores que o usuário inserir
+             */
             CheckSpecialCharactersInFields error = new CheckSpecialCharactersInFields(novoNome, testarAno, novoTipo);
             error.VerifyName();
             error.VerifyYear();
             error.VerifyCourseType();
         } while (condicao == false);
 
+        /*
+        Caso não haja nenhum conflito, o método retornará um aluno construído 
+        para ser adicionado no método inserirAluno() lá em cima
+        */
         return new Curso(novoNome, novoAno, TipoDoCurso.valueOf(novoTipo));
     }
 }

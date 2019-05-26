@@ -1,9 +1,7 @@
 package view;
 
 import java.util.Scanner;
-import model.Curso;
 import model.ListaCurso;
-import model.entities.TipoDoCurso;
 
 public class CursoView {
 

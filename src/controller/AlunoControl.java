@@ -3,7 +3,6 @@ package controller;
 import model.exceptions.CheckSpecialCharactersInFields;
 import java.util.Scanner;
 import model.Aluno;
-//import model.CorpoDeAlunos;
 import model.Faculdade;
 import view.AlunoView;
 import view.MenuView;
@@ -20,9 +19,11 @@ public class AlunoControl {
             int escolha = view.escolherOpcao();
             switch (escolha) {
                 case 1:
+                    //Inicia o método de inserir aluno
                     inserirAluno();
                     break;
                 case 2:
+                    //Retorna ao menu principal
                     MenuView start = new MenuView();
                     start.inicio();
                     break;
@@ -33,32 +34,36 @@ public class AlunoControl {
         System.exit(0);
     }
 
-//    public int menu() {
-//        return view.escolherOpcao();
-//    }
-
+    //Método que insere um novo aluno
     public void inserirAluno() {
         boolean alunoInserido = false;
         while (alunoInserido == false) {
             try {
                 Aluno aluno = this.pedirAluno();
+
+                /*
+                Essa variável retorna verdadeira se o aluno for inserido
+                Retorna falso e quebra o while se o aluno não tiver sido inserido
+                O aluno não será inserido quando já houver um aluno com aquele id
+                */                
                 alunoInserido = Faculdade.corpoDeAlunos.add(aluno);
-                
+
                 if (alunoInserido == false) {
                     System.out.println("Aluno nao foi inserido");
                 }
-            } catch (InputWithSpecialCharactersException e) {
+            } //Pega a exceção caso o usuário digite caracteres não permitidos no campo nome ou id
+            catch (InputWithSpecialCharactersException e) {
                 System.out.println("Erro: " + e.getMessage());
             }
         }
     }
 
-
+    //Método que lista todos os alunos cadastrados
     public void listarAlunos() {
-        System.out.println("mostrando alunos");
         view.mostrarAlunos(Faculdade.corpoDeAlunos);
     }
 
+    //Método que pede os dados do aluno a ser inserido
     public Aluno pedirAluno() throws InputWithSpecialCharactersException {
 
         System.out.println("\nEntre com os dados do aluno:");
@@ -68,10 +73,19 @@ public class AlunoControl {
         System.out.print("Nome: ");
         String novoNome = in.nextLine();
 
+        /*
+        Classe CheckSpecialCharactersInFields vai checar todos os caracteres inseridos pelo usuário
+        Irá verificar e, quando aplicado, lançará uma exceção que dirá se existe caracter não permitido
+        Checa tanto no campo ID quanto no campo NOME
+        */
         CheckSpecialCharactersInFields error = new CheckSpecialCharactersInFields(novoNome, novoId);
         error.VerifyId();
         error.VerifyName();
-
+        
+        /*
+        Caso não haja nenhum conflito, o método retornará um aluno construído 
+        para ser adicionado no método inserirAluno() lá em cima
+         */
         return new Aluno(novoId, novoNome);
     }
 }

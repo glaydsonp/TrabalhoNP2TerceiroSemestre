@@ -1,7 +1,6 @@
 package view;
 
 import java.util.Scanner;
-import model.Aluno;
 
 public class HistoricoView {
 

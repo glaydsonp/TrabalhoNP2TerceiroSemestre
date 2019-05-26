@@ -15,6 +15,7 @@ public class RendimentoControl {
 
     Faculdade faculdade = new Faculdade();
     RendimentoView view = new RendimentoView();
+    Scanner in = new Scanner(System.in);
 
     public void inicio() throws InputWithSpecialCharactersException {
         boolean continua = true;
@@ -22,9 +23,11 @@ public class RendimentoControl {
             int escolha = menu();
             switch (escolha) {
                 case 1:
+                    //Inicia o método de inserir rendimento
                     inserirRendimento();
                     break;
                 case 2:
+                    //Retorna ao menu principal
                     MenuView start = new MenuView();
                     start.inicio();
                     break;
@@ -41,18 +44,24 @@ public class RendimentoControl {
         return view.escolherOpcao();
     }
 
+    //Método que insere um novo rendimento
     public void inserirRendimento() throws InputWithSpecialCharactersException {
 
-        Scanner in = new Scanner(System.in);
         CursoControl cursoC = new CursoControl();
         Rendimento rend = new Rendimento();
 
+        /*
+         Pede o id do aluno e puxa o nome do aluno diretamente do cadastro
+         Cria um novo objeto aluno para inserção do rendimento no histórico
+         */
         System.out.println("Insira o Id do aluno: ");
         String id = in.nextLine();
         Aluno aluno = new Aluno(id, Faculdade.corpoDeAlunos.getAluno(id));
 
+        //Chama o método de pedir curso (mesmo método que pede um curso pra inserção)
         Curso curso = cursoC.pedirCurso();
 
+        //Chama o método de pedir as notas e retorna um vetor com todas as notas
         Double[] notas = view.pedirNotas();
 
         Nota notaNp1 = this.transformaNota(notas[0]);
@@ -72,5 +81,16 @@ public class RendimentoControl {
     public Nota transformaNota(Double valor) {
         Nota nota = new Nota(valor);
         return nota;
+    }
+
+    public Double inserirNota() {
+        Double valor = in.nextDouble();
+
+        while (valor > 10.0 || valor < 0.0) {
+            System.out.println("Nota inválida, por favor insira novamente.");
+            valor = in.nextDouble();
+        }
+
+        return valor;
     }
 }
