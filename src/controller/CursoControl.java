@@ -52,7 +52,7 @@ public class CursoControl {
                 cursoInserido = Faculdade.gradeDeCursos.add(curso);
                 if (cursoInserido == false) {
                     System.out.println("Curso nao foi inserido");
-                }
+                } 
             } catch (InputWithSpecialCharactersException ex) {
                 System.out.println("Erro: " + ex.getMessage());
             }

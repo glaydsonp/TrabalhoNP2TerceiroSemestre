@@ -7,7 +7,6 @@ public class Curso implements Comparable<Curso> {
     private String nomeDoCurso;
     private Integer anoDoCurso;
     private TipoDoCurso tipoDoCurso;
-    
 
     public Curso() {
     }
@@ -16,7 +15,7 @@ public class Curso implements Comparable<Curso> {
         this.nomeDoCurso = nomeDoCurso;
         this.anoDoCurso = anoDoCurso;
         this.tipoDoCurso = tipoDoCurso;
-        
+
     }
 
     public String getNomeDoCurso() {
@@ -59,22 +58,25 @@ public class Curso implements Comparable<Curso> {
 
         return this.getNomeDoCurso().equals(outroCurso.getNomeDoCurso())
                 && this.tipoDoCurso == outroCurso.tipoDoCurso
-                && this.getAnoDoCurso().equals(outroCurso.getAnoDoCurso());
+                && Integer.valueOf(this.getAnoDoCurso()) == Integer.valueOf(outroCurso.getAnoDoCurso());
     }
-
+    
     @Override
     public int compareTo(Curso outroCurso) {
         if (!this.getNomeDoCurso().equals(outroCurso.getNomeDoCurso())) {
             return this.getNomeDoCurso().compareTo(outroCurso.getNomeDoCurso());
         }
+        if(!this.getAnoDoCurso().equals(outroCurso.getAnoDoCurso())) {
+            return this.getAnoDoCurso().compareTo(outroCurso.getAnoDoCurso());
+        }
         return this.tipoDoCurso.compareTo(outroCurso.tipoDoCurso);
     }
-
+    
     @Override
     public String toString() {
-        return "\nCurso\n" + 
-                "Nome do curso: " + nomeDoCurso + 
-                "\nAno do curso: " + anoDoCurso + 
-                "\nTipo: " + tipoDoCurso;
+        return "\nCurso\n"
+                + "Nome do curso: " + nomeDoCurso
+                + "\nAno do curso: " + anoDoCurso
+                + "\nTipo: " + tipoDoCurso;
     }
 }

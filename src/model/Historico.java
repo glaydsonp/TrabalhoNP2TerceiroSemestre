@@ -18,9 +18,9 @@ public class Historico {
     }
 
     public void add(Aluno aluno, Curso curso, Rendimento rend) {
-//        GradeDeCursos grade = new GradeDeCursos(curso, rend);
-//        historico.put(aluno, new GradeDeCursos(curso, rend));
-        historico.put(aluno, grade.addGradeCurso(curso, rend));
+        GradeDeCursos grade = new GradeDeCursos(curso, rend);
+        historico.put(aluno, new GradeDeCursos(curso, rend));
+//        historico.put(aluno, grade.addGradeCurso(curso, rend));
     }
     
     public Boolean containsKey(Aluno aluno){
