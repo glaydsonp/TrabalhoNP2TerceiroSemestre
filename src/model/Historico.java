@@ -18,21 +18,21 @@ public class Historico {
     }
 
     public void add(Aluno aluno, Curso curso, Rendimento rend) {
-        GradeDeCursos grade = new GradeDeCursos(curso, rend);
-        grade.addGradeCurso(curso, rend);
+        GradeDeCursos grade = new GradeDeCursos();
         Faculdade.historico.put(aluno, grade);
+        grade.addGradeCurso(curso, rend);
     }
 
     public Boolean containsKey(Aluno aluno) {
-        return Faculdade.historico.containsKey(aluno);
+        return historico.containsKey(aluno);
     }
 
     public GradeDeCursos get(Aluno aluno) {
-        return Faculdade.historico.get(aluno);
+        return historico.get(aluno);
     }
 
     private void put(Aluno aluno, GradeDeCursos gradeDeCursos) {
-        Faculdade.historico.put(aluno, gradeDeCursos);
+        historico.put(aluno, gradeDeCursos);
     }
 
     public GradeDeCursos getHistorico(String id) {
@@ -46,6 +46,6 @@ public class Historico {
 
     @Override
     public String toString() {
-        return "Historico " + Faculdade.historico;
+        return "Historico " + historico;
     }
 }

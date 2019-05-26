@@ -5,6 +5,7 @@ import controller.AlunoControl;
 import controller.CursoControl;
 import controller.HistoricoControl;
 import controller.RendimentoControl;
+import model.exceptions.InputWithSpecialCharactersException;
 
 public class MenuView {
 
@@ -18,7 +19,7 @@ public class MenuView {
         return view.menuPrincipal();
     }
 
-    public void inicio() {
+    public void inicio() throws InputWithSpecialCharactersException {
         boolean continua = true;
         while (continua) {
 
@@ -65,7 +66,7 @@ public class MenuView {
         alunos.listarAlunos();
     }
 
-    public void listarHistorico() {
+    public void listarHistorico() throws InputWithSpecialCharactersException {
         historico.inicio();
     }
 
@@ -73,15 +74,15 @@ public class MenuView {
         //TODO
     }
 
-    public void incluirAluno() {
+    public void incluirAluno() throws InputWithSpecialCharactersException {
         alunos.inicio();
     }
 
-    public void incluirCurso() {
+    public void incluirCurso() throws InputWithSpecialCharactersException {
         curso.inicio();
     }
 
-    public void incluirRendimento() {
+    public void incluirRendimento() throws InputWithSpecialCharactersException {
         rendimento.inicio();
     }
 }

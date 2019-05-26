@@ -14,7 +14,7 @@ public class AlunoControl {
     Faculdade faculdade = new Faculdade();
     AlunoView view = new AlunoView();
 
-    public void inicio() {
+    public void inicio() throws InputWithSpecialCharactersException {
         boolean continua = true;
         while (continua) {
             int escolha = view.escolherOpcao();

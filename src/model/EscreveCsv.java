@@ -39,9 +39,9 @@ import java.util.ArrayList;
 //        
 //aqui sera feito o equivalente ao que foi feito em teste, 
 //porem criado, puxando o corpodealunos
-        for(corpoDeAlunos)
-        listaAlunos.add(aluno);
-        
+//        for(corpoDeAlunos){
+//        listaAlunos.add(aluno);
+//        }
         //incializacao do filewriter
         FileWriter fileWriter = null;
 
@@ -50,12 +50,12 @@ import java.util.ArrayList;
             fileWriter = new FileWriter("alunosa1111111111111.csv");
             
             //escreve uma lista de aluno para o csv
-            for (Aluno aaluno : listaAlunos) {
-                fileWriter.append(aaluno.getId());
-                fileWriter.append(pontovirgula);
-                fileWriter.append(aaluno.getNomeDoAluno());
-                fileWriter.append(pulalinha);
-            }
+//            for (Aluno aaluno : listaAlunos) {
+//                fileWriter.append(aaluno.getId());
+//                fileWriter.append(pontovirgula);
+//                fileWriter.append(aaluno.getNomeDoAluno());
+//                fileWriter.append(pulalinha);
+//            }
 			
 
             System.out.println("Deu bom!"); 
