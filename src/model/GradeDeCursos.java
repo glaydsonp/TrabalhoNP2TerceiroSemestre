@@ -28,16 +28,16 @@ public class GradeDeCursos {
         }
     }
     
-    public GradeDeCursos addGradeCurso(Curso curso, Rendimento rend) {
+    public void addGradeCurso(Curso curso, Rendimento rend) {
         if (!grade.containsKey(curso)) {
-            GradeDeCursos gradeCursos = new GradeDeCursos();
+//            GradeDeCursos gradeCursos = new GradeDeCursos();
             grade.put(curso, rend);
-            return gradeCursos;
+//            return gradeCursos;
 //            grade.put(curso, rend);
 //            return grade;
         } else {
             System.out.println("Curso já existente.");
-            return null;
+//            return null;
         }
     }
 
