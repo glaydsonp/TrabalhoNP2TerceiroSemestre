@@ -1,9 +1,10 @@
 package controller;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 import model.Aluno;
-import model.Faculdade;
 import model.Curso;
+import model.Faculdade;
 import model.Nota;
 import model.Rendimento;
 import model.entities.Prova;
@@ -20,7 +21,8 @@ public class RendimentoControl {
     public void inicio() throws InputWithSpecialCharactersException {
         boolean continua = true;
         do {
-            int escolha = menu();
+            try {
+                int escolha = menu();
             switch (escolha) {
                 case 1:
                     //Inicia o método de inserir rendimento
@@ -32,11 +34,17 @@ public class RendimentoControl {
                     start.inicio();
                     break;
                 default:
-                    System.out.println("opcao nao listada");
-
+                    throw new InputMismatchException("Opção não listada! Insira uma das opções acima.");
+               }
+            } catch (InputMismatchException e) {
+                if(e.getMessage() != null){
+                    System.out.println("Erro: " + e.getMessage());
+                } else{
+                    System.out.println("Erro: Opção não listada! Insira inteiros para escolher uma opção.");
+                }
             }
+            
         } while (continua == true);
-
         System.exit(0);
     }
 

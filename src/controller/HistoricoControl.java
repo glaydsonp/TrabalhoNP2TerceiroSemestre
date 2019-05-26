@@ -1,6 +1,6 @@
 package controller;
 
-import model.Aluno;
+import java.util.InputMismatchException;
 import model.Historico;
 import model.exceptions.InputWithSpecialCharactersException;
 import view.HistoricoView;
@@ -11,12 +11,11 @@ public class HistoricoControl {
     HistoricoView view = new HistoricoView();
 
     public void inicio() throws InputWithSpecialCharactersException {
-        boolean continua = true;
-        do {
+
+        try {
             int escolha = menu();
             switch (escolha) {
                 case 1:
-                    //Inicia o método de puxar o histórico
                     getHistorico();
                     break;
                 case 2:
@@ -24,12 +23,15 @@ public class HistoricoControl {
                     start.inicio();
                     break;
                 default:
-                    System.out.println("opcao nao listada");
-
+                    throw new InputMismatchException("Opção não listada! Insira uma das opções acima.");
             }
-        } while (continua == true);
-
-        System.exit(0);
+        } catch (InputMismatchException e) {
+            if (e.getMessage() != null) {
+                System.out.println("Erro: " + e.getMessage());
+            } else {
+                System.out.println("Erro: Opção não listada! Insira inteiros para escolher uma opção.");
+            }
+        }
     }
 
     public int menu() {
@@ -44,8 +46,8 @@ public class HistoricoControl {
 
             Historico historico = new Historico();
             /*
-            Caso o ID que o usuário tenha entrado seja inválido não retorna o historico
-            */
+             Caso o ID que o usuário tenha entrado seja inválido não retorna o historico
+             */
             if (id != null) {
                 System.out.println(historico.getHistorico(id));
                 aluno = true;

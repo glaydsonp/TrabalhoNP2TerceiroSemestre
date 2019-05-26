@@ -5,6 +5,7 @@ import controller.AlunoControl;
 import controller.CursoControl;
 import controller.HistoricoControl;
 import controller.RendimentoControl;
+import java.util.InputMismatchException;
 import model.exceptions.InputWithSpecialCharactersException;
 
 public class MenuView {
@@ -22,40 +23,45 @@ public class MenuView {
     public void inicio() throws InputWithSpecialCharactersException {
         boolean continua = true;
         while (continua) {
-
-            int escolha = menu();
-            switch (escolha) {
-                case 1:
-                    listarCursos();
-                    break;
-                case 2:
-                    listarAlunos();
-                    break;
-                case 3:
-                    listarHistorico();
-                    break;
-                case 4:
-                    listarRelatorio();
-                    break;
-                case 5:
-                    incluirAluno();
-                    break;
-                case 6:
-                    incluirCurso();
-                    break;
-                case 7:
-                    incluirRendimento();
-                    break;
-                case 8:
-                    continua = false;
-                    break;
-                default:
-                    System.out.println("opcao nao listada");
-
+            
+            try {
+                int escolha = menu();
+                switch (escolha) {
+                    case 1:
+                        listarCursos();
+                        break;
+                    case 2:
+                        listarAlunos();
+                        break;
+                    case 3:
+                        listarHistorico();
+                        break;
+                    case 4:
+                        listarRelatorio();
+                        break;
+                    case 5:
+                        incluirAluno();
+                        break;
+                    case 6:
+                        incluirCurso();
+                        break;
+                    case 7:
+                        incluirRendimento();
+                        break;
+                    case 8:
+                        System.exit(0);
+                        break;
+                    default:
+                        throw new InputMismatchException("Opção não listada! Insira uma das opções acima.");
+                }
+            } catch (InputMismatchException e) {
+                if(e.getMessage() != null){
+                    System.out.println("Erro: " + e.getMessage());
+                } else{
+                    System.out.println("Erro: Opção não listada! Insira inteiros para escolher uma opção.");
+                }
             }
-
         }
-        System.exit(0);
     }
 
     public void listarCursos() {

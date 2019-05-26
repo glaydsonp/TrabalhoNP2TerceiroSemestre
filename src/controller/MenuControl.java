@@ -12,6 +12,5 @@ public class MenuControl {
         System.out.println(chamaMenu);
         //Retorna a opção escolhida pelo usuário
         return chamaMenu.escolherOpcao();
-        
     }
 }
