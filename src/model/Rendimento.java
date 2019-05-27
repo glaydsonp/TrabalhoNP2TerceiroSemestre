@@ -37,11 +37,11 @@ public class Rendimento {
         }
     }
 
-    public Double getMedia() {
-        Double media = 0.0;
-
-        return media;
-    }
+//    public Double getMedia() {
+//        Double media = 0.0;
+//
+//        return media;
+//    }
 
     @Override
     public String toString() {

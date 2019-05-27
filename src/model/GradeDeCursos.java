@@ -6,7 +6,7 @@ import java.util.TreeMap;
 
 public class GradeDeCursos {
 
-    Map<Curso, Rendimento> grade = new TreeMap<>();
+    public Map<Curso, Rendimento> grade = new TreeMap<>();
     
     public GradeDeCursos() {
 

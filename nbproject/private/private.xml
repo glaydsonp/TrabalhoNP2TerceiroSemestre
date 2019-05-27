@@ -5,27 +5,35 @@
             <url>src/view/CursoView.java</url>
             <bookmark id="1">
                 <name/>
-                <line>16</line>
+                <line>18</line>
                 <key/>
             </bookmark>
         </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-<<<<<<< HEAD
-            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/view/Main.java</file>
-            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/controller/AlunoControl.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/ListaCurso.java</file>
             <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/EscreveCsv.java</file>
-            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/GradeDeCursos.java</file>
-            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/CsvCurso.java</file>
-            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/Historico.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/view/HistoricoView.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/Aluno.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/Rendimento.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/view/AlunoView.java</file>
             <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/view/MenuView.java</file>
-            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/controller/MenuControl.java</file>
-            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/Csv.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/Faculdade.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/view/CursoView.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/exceptions/CheckSpecialCharactersInFields.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/CsvCurso.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/controller/CsvControl.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/controller/CursoControl.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/view/Main.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/controller/RendimentoControl.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/Menu.java</file>
             <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/CorpoDeAlunos.java</file>
-=======
-            <file>file:/C:/Users/Glaydson/Documents/NetBeansProjects/TrabalhoNP2/src/controller/RendimentoControl.java</file>
->>>>>>> 2fbb297ff159ece8a602f341859e6dcbfd18db37
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/controller/MenuControl.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/Historico.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/controller/AlunoControl.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/model/entities/TipoDoCurso.java</file>
+            <file>file:/D:/Programming/APS%202019-1/TrabalhoNP2TerceiroSemestre/src/controller/HistoricoControl.java</file>
         </group>
     </open-files>
 </project-private>

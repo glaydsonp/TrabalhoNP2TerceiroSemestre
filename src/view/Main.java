@@ -7,11 +7,12 @@ import java.io.IOException;
 public class Main {
     public static void main(String[] args) throws IOException{
   
-//        CsvControl csvControl = new CsvControl();
-//        csvControl.lerCsvAluno();
-//        csvControl.lerCsvCurso();
+        CsvControl csvControl = new CsvControl();
+        csvControl.lerCsvAluno();
+        csvControl.lerCsvCurso();
 
         MenuView menu = new MenuView();
+        //metodo para testes manuais
 //        menu.inclusaoTeste();
         menu.inicio();
                

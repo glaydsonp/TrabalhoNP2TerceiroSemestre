@@ -110,22 +110,38 @@ public class MenuView {
     public void salvaAlteracao() throws IOException{
         csvControl.escreveAlunosCsv();
         csvControl.escreveCursosCsv();
-//        csvControl.escreveCursoEspecificoCsv();
+        csvControl.escreveCursoEspecificoCsv();
     }
     
+//    //metodo para testes manuais
 //    public void inclusaoTeste(){
 //        Faculdade test1 = new Faculdade();
 //        ListaCurso test2 = new ListaCurso();
-//        Faculdade.gradeDeCursos = test2;
-//        Curso cursoTest = new Curso("curs3",1314,TipoDoCurso.GRADUACAO);
-//        test2.add(cursoTest);
-//        Aluno alunoTest = new Aluno("b1341","Jose");
-//        Rendimento rendTest = new Rendimento(cursoTest);
+//        Curso cursoTest1 = new Curso("Graduation curs1",111,TipoDoCurso.GRADUACAO);
+//        Curso cursoTest2 = new Curso("pos cursDois",222,TipoDoCurso.POS_GRADUACAO);
+//        Curso cursoTest3 = new Curso("grad curs3",333,TipoDoCurso.GRADUACAO);
+//        Curso cursoTest4 = new Curso("pos curs4",1414,TipoDoCurso.POS_GRADUACAO);
+//        Aluno alunoTest1 = new Aluno("b1341","numeroUM");
+//        Aluno alunoTest2 = new Aluno("21nn3","Duas");
+//        Aluno alunoTest3 = new Aluno("33","Tres tres");
+//        Aluno alunoTest4 = new Aluno("4444","Quatro Q. Four");
+//        Rendimento rendTest = new Rendimento(cursoTest1);
 //        rendTest.setNotas(Prova.NP1, new Nota(7.0));
 //        rendTest.setNotas(Prova.NP2, new Nota(3.0));
 //        rendTest.setNotas(Prova.SUB, new Nota(4.0));
 //        rendTest.setNotas(Prova.EXAME, new Nota(9.0));
-//        Faculdade.historico.add(alunoTest, cursoTest, rendTest);
+//        Faculdade.gradeDeCursos = test2;
+//        test2.add(cursoTest1);
+//        test2.add(cursoTest2);
+//        test2.add(cursoTest3);
+//        test2.add(cursoTest4);
+//        
+//        Faculdade.corpoDeAlunos.add(alunoTest1);
+//        Faculdade.corpoDeAlunos.add(alunoTest2);
+//        Faculdade.corpoDeAlunos.add(alunoTest3);
+//        Faculdade.corpoDeAlunos.add(alunoTest4);
+//        
+//        Faculdade.historico.add(alunoTest1, cursoTest1, rendTest);
 //    }
-    
+//    
 }
