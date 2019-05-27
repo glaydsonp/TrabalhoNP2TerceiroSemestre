@@ -17,6 +17,10 @@ public class CheckSpecialCharactersInFields {
         
     }
     
+    public CheckSpecialCharactersInFields(String aId) throws InputWithSpecialCharactersException{
+        setId(aId);
+    } 
+    
     public CheckSpecialCharactersInFields(String aName, String aId) throws InputWithSpecialCharactersException{
         setName(aName);
         setId(aId);
@@ -101,3 +105,4 @@ public class CheckSpecialCharactersInFields {
     }
     
 }
+

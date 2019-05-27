@@ -1,7 +1,6 @@
 
 package view;
 
-
 import controller.CsvControl;
 import java.io.IOException;
 
