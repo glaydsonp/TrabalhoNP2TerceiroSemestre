@@ -44,6 +44,8 @@ public class RendimentoControl {
                 } else {
                     System.out.println("Erro: Opção não listada! Insira inteiros para escolher uma opção.");
                 }
+            } catch (InputWithSpecialCharactersException e){
+                System.out.println("Erro: " + e.getMessage());
             }
 
         } while (continua == true);
@@ -55,7 +57,7 @@ public class RendimentoControl {
     }
 
     //Método que insere um novo rendimento
-    public void inserirRendimento() throws InputWithSpecialCharactersException {
+    public void inserirRendimento() throws InputWithSpecialCharactersException, InputMismatchException {
 
         CursoControl cursoC = new CursoControl();
         Rendimento rend = new Rendimento();
@@ -64,7 +66,7 @@ public class RendimentoControl {
          Pede o id do aluno e puxa o nome do aluno diretamente do cadastro
          Cria um novo objeto aluno para inserção do rendimento no histórico
          */
-        System.out.println("Insira o Id do aluno: ");
+        System.out.println("Insira o ID do aluno: ");
         String id = in.nextLine();
 
         /*
