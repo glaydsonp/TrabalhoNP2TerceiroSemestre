@@ -5,7 +5,7 @@ import java.util.TreeMap;
 
 public class CorpoDeAlunos {
 
-    Map<String, String> alunos;
+    public Map<String, String> alunos;
 
     public CorpoDeAlunos() {
         this.alunos = new TreeMap<>();

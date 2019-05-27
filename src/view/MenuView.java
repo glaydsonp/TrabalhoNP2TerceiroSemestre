@@ -2,11 +2,24 @@ package view;
 
 import controller.MenuControl;
 import controller.AlunoControl;
+import controller.CsvControl;
 import controller.CursoControl;
 import controller.HistoricoControl;
 import controller.RendimentoControl;
+import java.io.IOException;
+import java.util.Collection;
 import java.util.InputMismatchException;
 import model.exceptions.InputWithSpecialCharactersException;
+
+import model.Faculdade;
+import model.CorpoDeAlunos;
+import model.Aluno;
+import model.Curso;
+import model.ListaCurso;
+import model.Nota;
+import model.Rendimento;
+import model.entities.Prova;
+import model.entities.TipoDoCurso;
 
 public class MenuView {
 
@@ -15,12 +28,13 @@ public class MenuView {
     AlunoControl alunos = new AlunoControl();
     HistoricoControl historico = new HistoricoControl();
     RendimentoControl rendimento = new RendimentoControl();
+    CsvControl csvControl = new CsvControl();
 
     public int menu() {
         return view.menuPrincipal();
     }
 
-    public void inicio() throws InputWithSpecialCharactersException {
+    public void inicio() throws InputWithSpecialCharactersException, IOException {
         boolean continua = true;
         while (continua) {
             
@@ -49,7 +63,8 @@ public class MenuView {
                         incluirRendimento();
                         break;
                     case 8:
-                        System.exit(0);
+                        salvaAlteracao();
+                        System.exit(0);                        
                         break;
                     default:
                         throw new InputMismatchException("Opção não listada! Insira uma das opções acima.");
@@ -72,7 +87,7 @@ public class MenuView {
         alunos.listarAlunos();
     }
 
-    public void listarHistorico() throws InputWithSpecialCharactersException {
+    public void listarHistorico() throws InputWithSpecialCharactersException, IOException {
         historico.inicio();
     }
 
@@ -80,15 +95,37 @@ public class MenuView {
         //TODO
     }
 
-    public void incluirAluno() throws InputWithSpecialCharactersException {
+    public void incluirAluno() throws InputWithSpecialCharactersException, IOException {
         alunos.inicio();
     }
 
-    public void incluirCurso() throws InputWithSpecialCharactersException {
+    public void incluirCurso() throws InputWithSpecialCharactersException, IOException {
         curso.inicio();
     }
 
-    public void incluirRendimento() throws InputWithSpecialCharactersException {
+    public void incluirRendimento() throws InputWithSpecialCharactersException, IOException {
         rendimento.inicio();
     }
+    
+    public void salvaAlteracao() throws IOException{
+        csvControl.escreveAlunosCsv();
+        csvControl.escreveCursosCsv();
+//        csvControl.escreveCursoEspecificoCsv();
+    }
+    
+//    public void inclusaoTeste(){
+//        Faculdade test1 = new Faculdade();
+//        ListaCurso test2 = new ListaCurso();
+//        Faculdade.gradeDeCursos = test2;
+//        Curso cursoTest = new Curso("curs3",1314,TipoDoCurso.GRADUACAO);
+//        test2.add(cursoTest);
+//        Aluno alunoTest = new Aluno("b1341","Jose");
+//        Rendimento rendTest = new Rendimento(cursoTest);
+//        rendTest.setNotas(Prova.NP1, new Nota(7.0));
+//        rendTest.setNotas(Prova.NP2, new Nota(3.0));
+//        rendTest.setNotas(Prova.SUB, new Nota(4.0));
+//        rendTest.setNotas(Prova.EXAME, new Nota(9.0));
+//        Faculdade.historico.add(alunoTest, cursoTest, rendTest);
+//    }
+    
 }

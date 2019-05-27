@@ -7,7 +7,7 @@ import java.util.TreeSet;
 
 public class ListaCurso implements Iterable<Curso> {
     
-    Collection<Curso> listaCurso;
+    public Collection<Curso> listaCurso;
 
     public ListaCurso() {
         listaCurso = new TreeSet<>();

@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 import model.Curso;
@@ -16,7 +17,7 @@ public class CursoControl {
     Faculdade faculdade = new Faculdade();
     CursoView view = new CursoView();
 
-    public void inicio() throws InputWithSpecialCharactersException {
+    public void inicio() throws InputWithSpecialCharactersException, IOException {
         boolean continua = true;
         do {
             try {

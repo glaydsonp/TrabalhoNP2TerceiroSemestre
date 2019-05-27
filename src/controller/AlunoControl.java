@@ -1,5 +1,6 @@
 package controller;
 
+import java.io.IOException;
 import java.util.InputMismatchException;
 import model.exceptions.CheckSpecialCharactersInFields;
 import java.util.Scanner;
@@ -15,7 +16,7 @@ public class AlunoControl {
     Faculdade faculdade = new Faculdade();
     AlunoView view = new AlunoView();
 
-    public void inicio() throws InputWithSpecialCharactersException {
+    public void inicio() throws InputWithSpecialCharactersException, IOException {
         boolean continua = true;
         while (continua) {
             try {

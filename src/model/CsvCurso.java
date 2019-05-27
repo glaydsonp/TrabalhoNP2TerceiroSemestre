@@ -53,7 +53,7 @@ public class CsvCurso {
                             tipoDoCurso = TipoDoCurso.GRADUACAO;
                             break;
                         case "POS_GRADUACAO":
-                            tipoDoCurso = TipoDoCurso.POSGRADUACAO;
+                            tipoDoCurso = TipoDoCurso.POS_GRADUACAO;
                             break;
                         default:
                             System.out.println("Tipo do curso inválido.");
